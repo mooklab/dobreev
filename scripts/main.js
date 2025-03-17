@@ -13,5 +13,4 @@ const searchHighlighter = (element) => {
     // return el
 }
 
-const width = window.innerWidth;
-console.log(width);
+alert(window.innerWidth)
