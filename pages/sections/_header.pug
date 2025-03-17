@@ -1,0 +1,157 @@
+mixin menu_accordion(title)
+    div.accordion
+        div.accordion_caption
+            img(src="images/menu_plus.svg", onclick="this.parentNode.parentNode.classList.add('opened')").open
+            img(src="images/menu_minus.svg", onclick="this.parentNode.parentNode.classList.remove('opened')").close
+            a(href="ctaegory.html")= title
+        div.accordion_content
+            div.accordion_overflow
+                ul
+                    a(href="category.html") !{title} №1
+                    a(href="category.html") !{title} №2
+                    a(href="category.html") !{title} №3
+
+header
+
+    div.top
+        div.container
+            a(href="").adress
+                img(src="images/pin.svg")
+                span Большой Кукмор
+            a(href="index.html").logotype
+                img(src="images/logotype.svg", alt="Добреев")
+            menu
+                a(href="index.html") Способы оплаты и доставки
+                a(href="index.html") Возврат товара
+                a(href="index.html") Юридическим лицам
+            div.phone
+                img(src="images/phone.svg")
+                a(href="tel:8 800 300 60 82") 8 800 300 60 82
+                span все звонки бесплатные
+
+    div.middle
+        a(href="index.html").logotype
+            img(src="images/logotype.svg", alt="Добреев")
+
+        div.catalog
+            button(onclick="this.closest('header').classList.toggle('menu'); this.classList.toggle('opened')")
+                img(src="images/menu.svg", alt="").menu
+                img(src="images/cross.svg", alt="").cross
+                span КАТАЛОГ
+            fieldset.search
+                img(src="images/search.svg", alt="")
+                input(type="search", name="", oninput="this.value.length > 2 ? this.parentNode.classList.add('opened') : this.parentNode.classList.remove('opened'); searchHighlighter(this)")
+                div.results
+                    ul
+                        a(href="catalog.html") Набор инструмента СЕРВИС КЛЮЧ 108 предметов
+                        a(href="catalog.html") Набор инструмента СЕРВИС КЛЮЧ 108 предметов
+                        a(href="catalog.html") Набор инструмента СЕРВИС КЛЮЧ 108 предметов
+                        a(href="catalog.html") Набор инструмента СЕРВИС КЛЮЧ 108 предметов
+                        a(href="catalog.html") Набор инструмента СЕРВИС КЛЮЧ 108 предметов
+
+        div.control
+            a(href="profile.html").sign
+                div.icon
+                    img(src="images/sign.svg", alt="")
+                span Войти
+            a(href="favourite.html").sign
+                div.icon
+                    img(src="images/favourite.svg", alt="")
+                    div.count 2
+                span Избранное
+            a(href="cart.html").sign
+                div.icon
+                    img(src="images/cart.svg", alt="")
+                    div.count 10+
+                span Корзина
+
+    div.bottom
+        div.container
+            menu
+                a(href="index.html") О нас
+                a(href="discounts.html") Акции
+                a(href="news.html") Новости
+                a(href="news.html") Блог
+                a(href="index.html") Вакансии
+                a(href="contacts.html") Контакты
+
+section.menu
+    div.container
+
+        div.wrap
+            div.categories
+                h2 Каталог
+                div.list
+                    a(href="categories.html") Металлопрокат
+                    a(href="categories.html") Строительные материалы
+                    a(href="categories.html") Отделка и интерьер
+                    a(href="categories.html") Сантехника
+                    a(href="categories.html") Инструмент
+                    a(href="categories.html") Электричество
+                    a(href="categories.html") Крепеж
+                    a(href="categories.html") Сад, огород и благоустройство
+                    a(href="categories.html") Автотовары
+                    a(href="categories.html") Инженерные системы
+                    a(href="categories.html") Товары для спорта и отдыха
+                    a(href="categories.html") Посуда
+                    a(href="categories.html") Бытовая химия
+                    a(href="categories.html") Хозяйственные товары
+                    a(href="categories.html") Товары для бань и саун
+                    a(href="categories.html") Бытовая техника и электроника
+
+            div.category
+                h2 Сантехника
+
+                div.list
+                    div.column
+                        +menu_accordion('Автономная канализация')
+                        +menu_accordion('Аксессуары')
+                        +menu_accordion('Биде')
+                        a(href="category.html") Биотуалеты
+                        a(href="category.html") Ванны
+                        a(href="category.html") Водонагреватели
+                        +menu_accordion('Гигиенические души')
+                        +menu_accordion('Датчики протечки воды')
+                        a(href="category.html") Для кухни
+                        a(href="category.html") Для унитаза
+                        a(href="category.html") Для сада
+
+                    div.column
+                        a(href="category.html") Автономная канализация
+                        a(href="category.html") Аксессуары
+                        a(href="category.html") Биде
+                        a(href="category.html") Биотуалеты
+                        a(href="category.html") Ванны
+                        a(href="category.html") Водонагреватели
+                        a(href="category.html") Гигиенические души
+                        a(href="category.html") Датчики протечки воды
+                        a(href="category.html") Для кухни
+                        a(href="category.html") Для унитаза
+                        a(href="category.html") Для сада
+
+                    div.column
+                        a(href="category.html") Автономная канализация
+                        a(href="category.html") Аксессуары
+                        +menu_accordion('Биде')
+                        a(href="category.html") Биотуалеты
+                        a(href="category.html") Ванны
+                        a(href="category.html") Водонагреватели
+                        a(href="category.html") Гигиенические души
+                        a(href="category.html") Датчики протечки воды
+                        a(href="category.html") Для кухни
+                        a(href="category.html") Для унитаза
+                        a(href="category.html") Для сада
+
+                    div.column
+                        +menu_accordion('Автономная канализация')
+                        a(href="category.html") Аксессуары
+                        a(href="category.html") Биде
+                        a(href="category.html") Биотуалеты
+                        a(href="category.html") Ванны
+                        a(href="category.html") Водонагреватели
+                        a(href="category.html") Гигиенические души
+                        +menu_accordion('Датчики протечки воды')
+                        +menu_accordion('Для кухни')
+                        a(href="category.html") Для унитаза
+                        a(href="category.html") Для сада
+                            

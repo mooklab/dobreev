@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta name="viewport" content="user-scalable=no, width=device-width, height=device-height">
+        <meta name="description" content="Описание сайта">
+        <meta name="keywords" content="Ключевые слова">
+        <title>Заголовок сайта</title>
+        <meta name="robots" content="index, follow">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="date=no">
+        <meta name="format-detection" content="address=no">
+        <meta name="format-detection" content="email=no">
+        <meta name="application-name" content="Заголовок сайта">
+        <meta name="color-scheme" content="only light">
+        <meta property="og:title" content="Заголовок сайта">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="Описание сайта">
+        <meta property="og:image" content="Изображение">
+        <meta property="og:site_name" content="Заголовок сайта">
+        <link rel="icon" href="images/favicon.png" type="image/png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/discount.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script defer src="scripts/main.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="top">
+                <div class="container"><a class="adress" href=""><img src="images/pin.svg"><span>Большой Кукмор</span></a><a class="logotype" href="index.html"><img src="images/logotype.svg" alt="Добреев"></a>
+                    <menu><a href="index.html">Способы оплаты и доставки</a><a href="index.html">Возврат товара</a><a href="index.html">Юридическим лицам</a></menu>
+                    <div class="phone"><img src="images/phone.svg"><a href="tel:8 800 300 60 82">8 800 300 60 82</a><span>все звонки бесплатные</span></div>
+                </div>
+            </div>
+            <div class="middle"><a class="logotype" href="index.html"><img src="images/logotype.svg" alt="Добреев"></a>
+                <div class="catalog">
+                    <button onclick="this.closest('header').classList.toggle('menu'); this.classList.toggle('opened')"><img class="menu" src="images/menu.svg" alt=""><img class="cross" src="images/cross.svg" alt=""><span>КАТАЛОГ</span></button>
+                    <fieldset class="search"><img src="images/search.svg" alt="">
+                        <input type="search" name="" oninput="this.value.length &gt; 2 ? this.parentNode.classList.add('opened') : this.parentNode.classList.remove('opened'); searchHighlighter(this)">
+                        <div class="results">
+                            <ul><a href="catalog.html">Набор инструмента СЕРВИС КЛЮЧ 108 предметов</a><a href="catalog.html">Набор инструмента СЕРВИС КЛЮЧ 108 предметов</a><a href="catalog.html">Набор инструмента СЕРВИС КЛЮЧ 108 предметов</a><a href="catalog.html">Набор инструмента СЕРВИС КЛЮЧ 108 предметов</a><a href="catalog.html">Набор инструмента СЕРВИС КЛЮЧ 108 предметов</a></ul>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="control"><a class="sign" href="profile.html">
+                        <div class="icon"><img src="images/sign.svg" alt=""></div><span>Войти</span></a><a class="sign" href="favourite.html">
+                        <div class="icon"><img src="images/favourite.svg" alt="">
+                            <div class="count">2</div>
+                        </div><span>Избранное</span></a><a class="sign" href="cart.html">
+                        <div class="icon"><img src="images/cart.svg" alt="">
+                            <div class="count">10+</div>
+                        </div><span>Корзина</span></a></div>
+            </div>
+            <div class="bottom">
+                <div class="container">
+                    <menu><a href="index.html">О нас</a><a href="discounts.html">Акции</a><a href="news.html">Новости</a><a href="news.html">Блог</a><a href="index.html">Вакансии</a><a href="contacts.html">Контакты</a></menu>
+                </div>
+            </div>
+        </header>
+        <section class="menu">
+            <div class="container">
+                <div class="wrap">
+                    <div class="categories">
+                        <h2>Каталог</h2>
+                        <div class="list"><a href="categories.html">Металлопрокат</a><a href="categories.html">Строительные материалы</a><a href="categories.html">Отделка и интерьер</a><a href="categories.html">Сантехника</a><a href="categories.html">Инструмент</a><a href="categories.html">Электричество</a><a href="categories.html">Крепеж</a><a href="categories.html">Сад, огород и благоустройство</a><a href="categories.html">Автотовары</a><a href="categories.html">Инженерные системы</a><a href="categories.html">Товары для спорта и отдыха</a><a href="categories.html">Посуда</a><a href="categories.html">Бытовая химия</a><a href="categories.html">Хозяйственные товары</a><a href="categories.html">Товары для бань и саун</a><a href="categories.html">Бытовая техника и электроника</a></div>
+                    </div>
+                    <div class="category">
+                        <h2>Сантехника</h2>
+                        <div class="list">
+                            <div class="column">
+                                        <div class="accordion">
+                                            <div class="accordion_caption"><img class="open" src="images/menu_plus.svg" onclick="this.parentNode.parentNode.classList.add('opened')"><img class="close" src="images/menu_minus.svg" onclick="this.parentNode.parentNode.classList.remove('opened')"><a href="ctaegory.html">Автономная канализация</a></div>
+                                            <div class="accordion_content">
+                                                <div class="accordion_overflow">
+                                                    <ul><a href="category.html">Автономная канализация №1</a><a href="category.html">Автономная канализация №2</a><a href="category.html">Автономная канализация №3</a></ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion">
+                                            <div class="accordion_caption"><img class="open" src="images/menu_plus.svg" onclick="this.parentNode.parentNode.classList.add('opened')"><img class="close" src="images/menu_minus.svg" onclick="this.parentNode.parentNode.classList.remove('opened')"><a href="ctaegory.html">Аксессуары</a></div>
+                                            <div class="accordion_content">
+                                                <div class="accordion_overflow">
+                                                    <ul><a href="category.html">Аксессуары №1</a><a href="category.html">Аксессуары №2</a><a href="category.html">Аксессуары №3</a></ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion">
+                                            <div class="accordion_caption"><img class="open" src="images/menu_plus.svg" onclick="this.parentNode.parentNode.classList.add('opened')"><img class="close" src="images/menu_minus.svg" onclick="this.parentNode.parentNode.classList.remove('opened')"><a href="ctaegory.html">Биде</a></div>
+                                            <div class="accordion_content">
+                                                <div class="accordion_overflow">
+                                                    <ul><a href="category.html">Биде №1</a><a href="category.html">Биде №2</a><a href="category.html">Биде №3</a></ul>
+                                                </div>
+                                            </div>
+                                        </div><a href="category.html">Биотуалеты</a><a href="category.html">Ванны</a><a href="category.html">Водонагреватели</a>
+                                        <div class="accordion">
+                                            <div class="accordion_caption"><img class="open" src="images/menu_plus.svg" onclick="this.parentNode.parentNode.classList.add('opened')"><img class="close" src="images/menu_minus.svg" onclick="this.parentNode.parentNode.classList.remove('opened')"><a href="ctaegory.html">Гигиенические души</a></div>
+                                            <div class="accordion_content">
+                                                <div class="accordion_overflow">
+                                                    <ul><a href="category.html">Гигиенические души №1</a><a href="category.html">Гигиенические души №2</a><a href="category.html">Гигиенические души №3</a></ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion">
+                                            <div class="accordion_caption"><img class="open" src="images/menu_plus.svg" onclick="this.parentNode.parentNode.classList.add('opened')"><img class="close" src="images/menu_minus.svg" onclick="this.parentNode.parentNode.classList.remove('opened')"><a href="ctaegory.html">Датчики протечки воды</a></div>
+                                            <div class="accordion_content">
+                                                <div class="accordion_overflow">
+                                                    <ul><a href="category.html">Датчики протечки воды №1</a><a href="category.html">Датчики протечки воды №2</a><a href="category.html">Датчики протечки воды №3</a></ul>
+                                                </div>
+                                            </div>
+                                        </div><a href="category.html">Для кухни</a><a href="category.html">Для унитаза</a><a href="category.html">Для сада</a>
+                            </div>
+                            <div class="column"><a href="category.html">Автономная канализация</a><a href="category.html">Аксессуары</a><a href="category.html">Биде</a><a href="category.html">Биотуалеты</a><a href="category.html">Ванны</a><a href="category.html">Водонагреватели</a><a href="category.html">Гигиенические души</a><a href="category.html">Датчики протечки воды</a><a href="category.html">Для кухни</a><a href="category.html">Для унитаза</a><a href="category.html">Для сада</a></div>
+                            <div class="column"><a href="category.html">Автономная канализация</a><a href="category.html">Аксессуары</a>
+                                        <div class="accordion">
+                                            <div class="accordion_caption"><img class="open" src="images/menu_plus.svg" onclick="this.parentNode.parentNode.classList.add('opened')"><img class="close" src="images/menu_minus.svg" onclick="this.parentNode.parentNode.classList.remove('opened')"><a href="ctaegory.html">Биде</a></div>
+                                            <div class="accordion_content">
+                                                <div class="accordion_overflow">
+                                                    <ul><a href="category.html">Биде №1</a><a href="category.html">Биде №2</a><a href="category.html">Биде №3</a></ul>
+                                                </div>
+                                            </div>
+                                        </div><a href="category.html">Биотуалеты</a><a href="category.html">Ванны</a><a href="category.html">Водонагреватели</a><a href="category.html">Гигиенические души</a><a href="category.html">Датчики протечки воды</a><a href="category.html">Для кухни</a><a href="category.html">Для унитаза</a><a href="category.html">Для сада</a>
+                            </div>
+                            <div class="column">
+                                        <div class="accordion">
+                                            <div class="accordion_caption"><img class="open" src="images/menu_plus.svg" onclick="this.parentNode.parentNode.classList.add('opened')"><img class="close" src="images/menu_minus.svg" onclick="this.parentNode.parentNode.classList.remove('opened')"><a href="ctaegory.html">Автономная канализация</a></div>
+                                            <div class="accordion_content">
+                                                <div class="accordion_overflow">
+                                                    <ul><a href="category.html">Автономная канализация №1</a><a href="category.html">Автономная канализация №2</a><a href="category.html">Автономная канализация №3</a></ul>
+                                                </div>
+                                            </div>
+                                        </div><a href="category.html">Аксессуары</a><a href="category.html">Биде</a><a href="category.html">Биотуалеты</a><a href="category.html">Ванны</a><a href="category.html">Водонагреватели</a><a href="category.html">Гигиенические души</a>
+                                        <div class="accordion">
+                                            <div class="accordion_caption"><img class="open" src="images/menu_plus.svg" onclick="this.parentNode.parentNode.classList.add('opened')"><img class="close" src="images/menu_minus.svg" onclick="this.parentNode.parentNode.classList.remove('opened')"><a href="ctaegory.html">Датчики протечки воды</a></div>
+                                            <div class="accordion_content">
+                                                <div class="accordion_overflow">
+                                                    <ul><a href="category.html">Датчики протечки воды №1</a><a href="category.html">Датчики протечки воды №2</a><a href="category.html">Датчики протечки воды №3</a></ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion">
+                                            <div class="accordion_caption"><img class="open" src="images/menu_plus.svg" onclick="this.parentNode.parentNode.classList.add('opened')"><img class="close" src="images/menu_minus.svg" onclick="this.parentNode.parentNode.classList.remove('opened')"><a href="ctaegory.html">Для кухни</a></div>
+                                            <div class="accordion_content">
+                                                <div class="accordion_overflow">
+                                                    <ul><a href="category.html">Для кухни №1</a><a href="category.html">Для кухни №2</a><a href="category.html">Для кухни №3</a></ul>
+                                                </div>
+                                            </div>
+                                        </div><a href="category.html">Для унитаза</a><a href="category.html">Для сада</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <main>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="top"><a class="logotype" href="index.html"><img src="images/logotype.svg" alt="Добреев"></a>
+                    <menu><a href="index.html">О нас</a><a href="discounts.html">Акции</a><a href="index.html">Цех. профнастила</a><a href="news.html">Новости</a><a href="news.html">Блог</a><a href="index.html">Отделка закупок</a><a href="index.html">Вакансии</a><a href="contacts.html">Контакты</a></menu>
+                    <div class="phone"><img src="images/phone.svg">
+                        <div><a href="tel:8 800 300 60 82">8 800 300 60 82</a><span>все звонки бесплатные</span></div>
+                    </div>
+                </div>
+                <div class="bottom"><span class="copyright">© 2024 — «Добреев»</span><span class="policy">Вы принимаете условия политики в отношении обработки персональных данных и пользовательского соглашения каждый раз, когда оставляете свои данные в любой форме обратной связи на сайте Dobreew.com</span><a class="mwi" href="https://mwi.me/" target="blank"><img src="images/mwi.svg" alt=""></a>
+                    <div class="contacts">
+                        <div class="socials"><a href="telegram.org"><img src="images/telegram.svg" alt="Telegram"></a><a href="vk.ru"><img src="images/vkontakte.svg" alt="Вконтакте"></a></div><a class="email" href="mailto:info@dobreev.com"><img src="images/email.svg" alt=""><span>info@dobreev.com</span></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

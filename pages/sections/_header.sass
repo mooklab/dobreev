@@ -1,0 +1,390 @@
+header
+
+    div.top
+        grid-column: full
+        display: grid
+        justify-items: center
+        background: #f2f5ef
+        +screen(m)
+            background: unset
+
+        div.container
+            display: grid
+            justify-items: center
+            grid-template-columns: 1fr max-content 1fr
+            grid-gap: var(--gap)
+            padding: 12px var(--gap)
+            max-width: calc( var(--content-width) + var(--gap) )
+            width: 100%
+            +screen(m)
+                padding: 10px var(--gap)
+
+        a.logotype
+            display: none
+            +screen(m)
+                display: block
+            img
+                +screen(m)
+                    width: 115px
+
+        a.adress
+            display: grid
+            grid-auto-flow: column
+            grid-auto-columns: max-content
+            align-items: center
+            justify-self: start
+            grid-gap: 8px
+            font-weight: 300
+            font-size: 10px
+            line-height: 120%
+            color: #000
+            span
+                width: max-content
+                border-bottom: 1px dashed #5AB356
+                +screen(m)
+                    display: none
+
+        menu
+            display: grid
+            grid-auto-flow: column
+            grid-auto-columns: max-content
+            grid-gap: 40px
+            +screen(m)
+                display: none
+            a
+                font-weight: 300
+                font-size: 10px
+                color: #536452
+
+        div.phone
+            justify-self: end
+            display: grid
+            grid-auto-flow: column
+            grid-auto-columns: max-content
+            align-items: center
+            grid-gap: 14px
+
+            a
+                color: #536452
+                +screen(m)
+                    display: none
+
+            span
+                font-size: 12px
+                color: #536452
+                +screen(m)
+                    display: none
+
+    div.middle
+        display: grid
+        align-items: center
+        grid-template-columns: max-content 1fr max-content
+        grid-gap: var(--gap)
+        padding: 12px 0
+        +screen(m)
+            grid-template-columns: 1fr
+            padding: unset
+            padding-bottom: 12px
+
+        a.logotype
+            +screen(m)
+                display: none
+
+        div.catalog
+            position: relative
+            display: grid
+            grid-template-columns: max-content 1fr
+            justify-self: center
+            max-width: 868px
+            width: 100%
+            height: 40px
+            +screen(s)
+                grid-gap: 8px
+
+            button
+                border-top-right-radius: unset
+                border-bottom-right-radius: unset
+                height: 40px
+                min-width: unset
+                +screen(s)
+                    width: 40px
+                    padding: unset
+                    border-radius: 4px
+                    span
+                        display: none
+
+                img
+                    height: 14px
+                    width: 18px
+                    object-fit: contain
+                    object-position: left center
+
+                img:nth-child(1)
+                    display: block
+                img:nth-child(2)
+                    display: none
+                &.opened
+                    img:nth-child(1)
+                        display: none
+                    img:nth-child(2)
+                        display: block
+
+            fieldset
+                position: relative
+
+                input
+                    width: 100%
+                    padding-left: 22px
+                    border: 1px solid #e9ebe6
+                    border-top-right-radius: 4px
+                    border-bottom-right-radius: 4px
+                    border-left: unset
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 137%
+                    color: #313b30
+                    height: 40px
+                    +screen(s)
+                        border-radius: 4px
+                        border: 1px solid #e9ebe6
+                        font-size: 14px
+
+                    &:focus
+                        border: 1px solid #4FAA4B
+                        border-left: unset
+                        +screen(s)
+                            border: 1px solid #4FAA4B
+
+                    &:not(:focus) + div.results
+                        grid-template-rows: 0fr
+
+                img
+                    position: absolute
+                    right: 13px
+                    top: 50%
+                    transform: translateY(-50%)
+
+                &.opened
+                    div.results
+                        grid-template-rows: 1fr
+
+            div.results
+                position: absolute
+                top: calc(100% + 8px)
+                left: 0
+                width: 100%
+                display: grid
+                grid-template-rows: 0fr
+                transition: grid-template-rows 0.3s
+                border-radius: 4px
+                box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.12)
+                background: white
+                z-index: 1
+
+                ul
+                    overflow: hidden
+                    display: grid
+
+                a
+                    padding: 14px 24px
+                    font-weight: 300
+                    font-size: 16px
+                    line-height: 137%
+                    color: #8d9487
+                    +screen(m)
+                        font-size: 12px
+
+                    b
+                        font-weight: 300
+                        font-size: 16px
+                        line-height: 137%
+                        color: #313b30
+
+                    &:hover
+                        background: #eeeeee
+
+        div.control
+            display: grid
+            align-items: center
+            grid-auto-flow: column
+            grid-auto-columns: max-content
+            grid-gap: 40px
+            font-size: 12px
+            color: #646464
+            +screen(m)
+                display: none
+
+            & > *
+                display: grid
+                justify-items: center
+                grid-gap: 5px
+
+                div.icon
+                    position: relative
+
+                div.count
+                    display: grid
+                    align-items: center
+                    justify-items: center
+                    position: absolute
+                    top: -4px
+                    right: -10px
+                    width: 16px
+                    height: 16px
+                    padding: 0 5px
+                    background: #FFE032
+                    border-radius: 999px
+                    font-weight: 300
+                    font-size: 10px
+                    line-height: 1em
+                    color: #ac8400
+                    white-space: nowrap
+
+    div.bottom
+        grid-column: full
+        justify-items: center
+        background: #4faa4b
+        
+
+        div.container
+            max-width: calc( var(--content-width) + var(--gap) )
+            +screen(m)
+                width: 100%
+                max-width: unset
+                overflow-x: scroll
+                display: block
+                &::-webkit-scrollbar
+                    opacity: 0
+                    display: none
+                    height: 0
+                    width: 0
+                
+
+        menu
+            display: grid
+            grid-auto-flow: column
+            grid-auto-columns: max-content
+            grid-gap: 56px
+            +screen(m)
+                grid-gap: 42px
+                margin-left: var(--gap)
+                margin-right: var(--gap)
+                width: max-content
+
+            a
+                font-size: 13px
+                color: white
+                padding: 12px 0
+
+    &.menu + section.menu
+        grid-template-rows: 1fr
+
+section.menu
+    background: #F8FAF7
+    display: grid
+    grid-template-rows: 0fr
+    transition: grid-template-rows 0.3s
+
+    div.container
+        overflow: hidden
+        +screen(m)
+            grid-column: full
+
+    div.wrap
+        display: grid
+        align-items: start
+        grid-template-columns: max-content 1fr
+        grid-gap: 20px
+        padding: 20px 0
+        +screen(m)
+            grid-template-columns: 1fr
+            padding: 0
+
+    div.categories
+        display: grid
+        grid-gap: 24px
+        background: white
+        padding: 40px 35px
+        +screen(m)
+            padding: 26px var(--gap) 40px
+
+        div.list
+            display: grid
+            a
+                font-size: 13px
+                color: #313b30
+                border-bottom: 1px solid #f2f5ef
+                padding: 10px 0
+                &:last-child
+                    border-bottom: unset
+
+    div.category
+        display: grid
+        grid-gap: 20px
+        background: white
+        padding: 40px
+        +screen(m)
+            display: none
+
+        div.accordion
+            
+            div.accordion_caption
+                display: grid
+                grid-template-columns: max-content 1fr
+                align-items: center
+                grid-gap: 12px
+                img
+                    cursor: pointer
+                    &.close
+                        display: none
+
+            div.accordion_content
+                display: grid
+                grid-template-rows: 0fr
+                transition: grid-template-rows 0.3s
+
+            div.accordion_overflow
+                overflow: hidden
+
+            &.opened
+                div.accordion_caption
+                    img.open
+                        display: none
+                    img.close
+                        display: block
+                div.accordion_content
+                    grid-template-rows: 1fr
+
+        div.list
+            display: grid
+            grid-template-columns: repeat(4, 1fr)
+            grid-gap: 10px
+            align-items: start
+            +screen(l)
+                grid-template-columns: repeat(2, 1fr)
+
+            div.column
+                display: grid
+                grid-gap: 10px
+                & > a
+                    margin-left: 28px
+
+        a
+            font-weight: 300
+            font-size: 13px
+            line-height: 169%
+            color: #313b30
+            &:hover
+                color: #4faa4b
+
+        ul
+            display: grid
+            grid-gap: 14px
+            border-top: 1px solid #f2f5ef
+            border-bottom: 1px solid #f2f5ef
+            padding: 14px 0
+            margin:  14px 0px 4px 28px
+            a
+                color: #536452
+
+
