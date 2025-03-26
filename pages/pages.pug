@@ -1,0 +1,25 @@
+extends common/pug/_layout.pug
+include common/pug/_mixins.pug
+
+block links
+    link(rel="stylesheet", href="css/pages.css")
+
+block content
+    
+    section.pages
+        div.container
+            a(href="index.html", target="blank") Главная
+            a(href="catalog.html", target="blank") Каталог
+            a(href="categories.html", target="blank") Категория
+            a(href="category.html", target="blank") Товары
+            a(href="product.html", target="blank") Товар
+            a(href="cart.html", target="blank") Корзина
+            a(href="profile.html", target="blank") Профиль
+            a(href="favourite.html", target="blank") Избранное
+            a(href="history.html", target="blank") История
+            a(href="discounts.html", target="blank") Акции
+            a(href="discount.html", target="blank") Акция
+            a(href="news.html", target="blank") Новости
+            a(href="article.html", target="blank") Новость
+            a(href="contacts.html", target="blank") Контакты
+            a(href="404.html", target="blank") 404
