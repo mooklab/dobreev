@@ -1,3 +1,5 @@
+- var categories = ["Металлопрокат", "Строительные материалы", "Отделка и интерьер", "Сантехника", "Инструмент", "Электричество", "Крепеж", "Сад, огород и благоустройство", "Автотовары", "Инженерные системы", "Товары для спорта и отдыха", "Посуда", "Бытовая химия", "Хозяйственные товары", "Товары для бань и саун", "Бытовая техника и электроника"]
+
 mixin menu_accordion(title)
     div.accordion
         div.accordion_caption
@@ -78,80 +80,67 @@ header
 section.menu
     div.container
 
-        div.wrap
+        div.wrap.tabs
             div.categories
                 h2 Каталог
                 div.list
-                    a(href="categories.html") Металлопрокат
-                    a(href="categories.html") Строительные материалы
-                    a(href="categories.html") Отделка и интерьер
-                    a(href="categories.html") Сантехника
-                    a(href="categories.html") Инструмент
-                    a(href="categories.html") Электричество
-                    a(href="categories.html") Крепеж
-                    a(href="categories.html") Сад, огород и благоустройство
-                    a(href="categories.html") Автотовары
-                    a(href="categories.html") Инженерные системы
-                    a(href="categories.html") Товары для спорта и отдыха
-                    a(href="categories.html") Посуда
-                    a(href="categories.html") Бытовая химия
-                    a(href="categories.html") Хозяйственные товары
-                    a(href="categories.html") Товары для бань и саун
-                    a(href="categories.html") Бытовая техника и электроника
+                    each category, index in categories
+                        a(href="categories.html", class=index==4 && "opened", onclick="event.preventDefault();").tab_caption= category
 
-            div.category
-                h2 Сантехника
+            each category, index in categories
+                div(class=index==4 && "opened").category.tab_content
+                    h2= category
 
-                div.list
-                    div.column
-                        +menu_accordion('Автономная канализация')
-                        +menu_accordion('Аксессуары')
-                        +menu_accordion('Биде')
-                        a(href="category.html") Биотуалеты
-                        a(href="category.html") Ванны
-                        a(href="category.html") Водонагреватели
-                        +menu_accordion('Гигиенические души')
-                        +menu_accordion('Датчики протечки воды')
-                        a(href="category.html") Для кухни
-                        a(href="category.html") Для унитаза
-                        a(href="category.html") Для сада
+                    div.list
+                        div.column
+                            +menu_accordion('Автономная канализация')
+                            +menu_accordion('Аксессуары')
+                            +menu_accordion('Биде')
+                            a(href="category.html") Биотуалеты
+                            a(href="category.html") Ванны
+                            a(href="category.html") Водонагреватели
+                            +menu_accordion('Гигиенические души')
+                            +menu_accordion('Датчики протечки воды')
+                            a(href="category.html") Для кухни
+                            a(href="category.html") Для унитаза
+                            a(href="category.html") Для сада
 
-                    div.column
-                        a(href="category.html") Автономная канализация
-                        a(href="category.html") Аксессуары
-                        a(href="category.html") Биде
-                        a(href="category.html") Биотуалеты
-                        a(href="category.html") Ванны
-                        a(href="category.html") Водонагреватели
-                        a(href="category.html") Гигиенические души
-                        a(href="category.html") Датчики протечки воды
-                        a(href="category.html") Для кухни
-                        a(href="category.html") Для унитаза
-                        a(href="category.html") Для сада
+                        div.column
+                            a(href="category.html") Автономная канализация
+                            a(href="category.html") Аксессуары
+                            a(href="category.html") Биде
+                            a(href="category.html") Биотуалеты
+                            a(href="category.html") Ванны
+                            a(href="category.html") Водонагреватели
+                            a(href="category.html") Гигиенические души
+                            a(href="category.html") Датчики протечки воды
+                            a(href="category.html") Для кухни
+                            a(href="category.html") Для унитаза
+                            a(href="category.html") Для сада
 
-                    div.column
-                        a(href="category.html") Автономная канализация
-                        a(href="category.html") Аксессуары
-                        +menu_accordion('Биде')
-                        a(href="category.html") Биотуалеты
-                        a(href="category.html") Ванны
-                        a(href="category.html") Водонагреватели
-                        a(href="category.html") Гигиенические души
-                        a(href="category.html") Датчики протечки воды
-                        a(href="category.html") Для кухни
-                        a(href="category.html") Для унитаза
-                        a(href="category.html") Для сада
+                        div.column
+                            a(href="category.html") Автономная канализация
+                            a(href="category.html") Аксессуары
+                            +menu_accordion('Биде')
+                            a(href="category.html") Биотуалеты
+                            a(href="category.html") Ванны
+                            a(href="category.html") Водонагреватели
+                            a(href="category.html") Гигиенические души
+                            a(href="category.html") Датчики протечки воды
+                            a(href="category.html") Для кухни
+                            a(href="category.html") Для унитаза
+                            a(href="category.html") Для сада
 
-                    div.column
-                        +menu_accordion('Автономная канализация')
-                        a(href="category.html") Аксессуары
-                        a(href="category.html") Биде
-                        a(href="category.html") Биотуалеты
-                        a(href="category.html") Ванны
-                        a(href="category.html") Водонагреватели
-                        a(href="category.html") Гигиенические души
-                        +menu_accordion('Датчики протечки воды')
-                        +menu_accordion('Для кухни')
-                        a(href="category.html") Для унитаза
-                        a(href="category.html") Для сада
+                        div.column
+                            +menu_accordion('Автономная канализация')
+                            a(href="category.html") Аксессуары
+                            a(href="category.html") Биде
+                            a(href="category.html") Биотуалеты
+                            a(href="category.html") Ванны
+                            a(href="category.html") Водонагреватели
+                            a(href="category.html") Гигиенические души
+                            +menu_accordion('Датчики протечки воды')
+                            +menu_accordion('Для кухни')
+                            a(href="category.html") Для унитаза
+                            a(href="category.html") Для сада
                             

@@ -1,7 +1,15 @@
 extends common/pug/_layout.pug
+include common/pug/_mixins.pug
 
 block links
     link(rel="stylesheet", href="css/catalog.css")
 
 block content
-    //- include sections/index/_main.pug
+
+    include sections/catalog/_main.pug
+
+    - var section_class = 'hits'
+    - var section_title = 'Хиты продаж'
+    include sections/_products.pug
+    
+    include sections/_articles.pug

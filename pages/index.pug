@@ -1,7 +1,36 @@
 extends common/pug/_layout.pug
+include common/pug/_mixins.pug
 
 block links
     link(rel="stylesheet", href="css/index.css")
 
 block content
     include sections/index/_main.pug
+
+    - var section_class = 'recommended'
+    - var section_title = 'Добреев рекомендует'
+    include sections/_products.pug
+
+    - var section_class = 'brand'
+    - var section_title = 'Проверенный брэнд'
+    include sections/_products.pug
+
+    include sections/index/_brands.pug
+
+    - var section_class = 'hits'
+    - var section_title = 'Хиты продаж'
+    include sections/_products.pug
+
+    include sections/_articles.pug
+
+    - var section_class = 'useful'
+    - var section_title = 'Может пригодиться'
+    include sections/_products.pug
+
+    - var section_class = 'watched'
+    - var section_title = 'Вы смотрели'
+    include sections/_products.pug
+
+    include sections/index/_advantages.pug
+    include sections/index/_news.pug
+    include sections/index/_banners.pug

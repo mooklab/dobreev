@@ -1,0 +1,15 @@
+section.question
+    div.container
+
+        h2 Остались вопросы?
+
+        form(action="")
+            input(type="text", placeholder="Имя") 
+            input(type="text", placeholder="Фамилия") 
+            input(type="email", placeholder="E-mail*") 
+            input(type="tel", placeholder="Контактный телефон")
+            div.empty
+            +select('theme', 'Тема вопроса', 'Тема 1', 'Тема 2', 'Тема 3', 'Тема 4')
+            div.merge
+                input(type="text", placeholder="Вопрос*")
+                button Отправить

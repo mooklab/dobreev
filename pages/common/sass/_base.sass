@@ -2,10 +2,13 @@
 
 \:root
     --gap: 30px
+    --section-gap: 40px
     --full: minmax(var(--gap), 1fr)
     --content: min(var(--content-width), 100% - var(--gap) * 2)
     --breakout: minmax(0, 190px)
     --content-width: 1756px
+    +screen(m)
+        --section-gap: 80px
     +screen(xs)
         --gap: 13px
 

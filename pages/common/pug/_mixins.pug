@@ -1,0 +1,118 @@
+mixin product(image, article, title, price, discount, ...tags)
+    a(href="product.html").product
+
+        div(onclick="event.preventDefault();this.classList.toggle('added')").favourite
+            include ../../../images/favourite.svg
+
+        - if( discount > 0 || tags.length > 0 )
+            div.tags
+                - if( discount > 0 )
+                    span.discount= '-' + discount + '%'
+                - if ( tags.length > 0 )
+                        each tag in tags
+                            span(class=tag=='Новинка' ? 'new' : (tag=='Осталось мало' ? 'few' : '')).tag= tag
+        
+        div.swiper.product_card_swiper
+            div.swiper-wrapper
+                div.swiper-slide: img(src=`images/products/${image}/1.webp`, alt=title).preview
+                div.swiper-slide: img(src=`images/products/${image}/2.webp`, alt=title).preview
+                div.swiper-slide: img(src=`images/products/${image}/3.webp`, alt=title).preview
+                div.swiper-slide: img(src=`images/products/${image}/4.webp`, alt=title).preview
+        span.article= article
+        span.title= title
+
+        div.order
+            div.price
+                - if( discount > 0 )
+                    span.old !{ new Intl.NumberFormat('ru-RU').format(Math.round(parseInt(price) + (price / 100 * discount))) }
+                span.current !{ new Intl.NumberFormat('ru-RU').format(price) } ₽
+            div.cart
+                img(src="images/cart_add.svg", alt="В корзину")
+            
+mixin article(image, title)
+    a(href="article.html").article
+        img(src=image, alt=title)
+        div.tags
+            span.tag Обзор
+            span.tag Сад и огород
+        h3= title
+
+mixin headline(image, title, text)
+    a(href="article.html").headline
+        img(src=image, alt=title)
+        span.date 10.11.2024
+        h3= title
+        span.excerpt= text
+
+mixin category(image, count, title, ...subcategories)
+    div.category
+        img(src=image, alt=title).preview
+        div.title
+            span= count
+            a(href="categories.html")= title
+        - if ( subcategories.length > 0 )
+            div.sublist
+                ul
+                    each subcategory in subcategories
+                        li: a(href="category.html")= subcategory
+                - if ( subcategories.length > 4)
+                    a(onclick="this.parentNode.classList.add('opened')").more еще !{subcategories.length - 4}
+                    a(onclick="this.parentNode.classList.remove('opened')").less скрыть
+
+mixin select(name, title, ...items)
+    fieldset.select(class=name)
+        div(tabindex="0").select_current
+            input(type="radio", id=name, value=title, name=name, checked)
+            span= title
+            each item, index in items
+                //- - index == 0 ? checked = true : checked = false
+                input(type="radio", id=name + '_' + index, value=item, name=name)
+                span= item
+            div.arrow
+                include ../../../images/select_arrow.svg
+        div.select_list
+            block
+            each item, index in items
+                label(for=name + '_' + index)= item
+
+mixin checkboxes(name, ...items)
+    div(class=name).checkboxes
+        each item, index in items
+            label.checkbox
+                input(type="checkbox", name=name, value=item)
+                span !{item}
+
+mixin radios(name, ...items)
+    div(class=name).radios
+        each item, index in items
+            label.radio
+                input(type="radio", name=name, value=item)
+                span !{item}
+
+mixin range(name, min, max)
+    div.range
+        div.inputs
+            input(type="number", min=min, max=max, value=min)
+            input(type="number", min=min, max=max, value=max)
+        div.tracker
+            input(type="range", min=min, max=max, value=min)
+            input(type="range", min=min, max=max, value=max)
+            div.track
+        block
+
+mixin lkmenu(link)
+    div(onclick="this.classList.toggle('opened')").lkmenu
+        span.title Личный кабинет
+        ul
+            li 
+                a(href="profile.html", class=link=='profile' && 'active') Мой профиль
+                a(href="history.html", class=link=='history' && 'active') История заказов
+                a(href="favourite.html", class=link=='favourite' && 'active') Избранное
+                a(href="profile.html") Просмотренные товары
+
+mixin article(image, date, title)
+    a(href="article.html").article
+        img(src=image, alt=title)
+        span.date= date
+        span.title= title
+

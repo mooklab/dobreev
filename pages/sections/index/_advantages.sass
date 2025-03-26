@@ -1,0 +1,57 @@
+section.advantages
+    margin-top: 40px
+    margin-bottom: 40px
+
+    div.container
+        display: grid
+        grid-gap: 24px
+        +screen(m)
+            grid-gap: 16px
+
+    div.list
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: 20px
+        +screen(l)
+            grid-template-columns: repeat(2, 1fr)
+        +screen(s)
+            grid-template-columns: 1fr
+            grid-gap: 8px
+
+    div.advantage
+        position: relative
+        display: grid
+        align-content: start
+        border: 1px solid #e9ebe6
+        border-radius: 4px
+        padding: 24px
+        padding-left: 148px
+        +screen(m)
+            padding: 21px 17px
+            padding-left: 100px
+
+        div.icon
+            display: grid
+            justify-items: center
+            position: absolute
+            left: 0px
+            width: 148px
+            height: 100%
+            padding: 24px
+            +screen(m)
+                width: 100px
+                padding: 24px 0
+
+        span.title
+            font-weight: 300
+            font-size: 16px
+            line-height: 137%
+            color: #313b30
+            margin-bottom: 24px
+            +screen(m)
+                margin-bottom: 8px
+
+        span.text
+            font-weight: 400
+            font-size: 13px
+            color: #adb3a7

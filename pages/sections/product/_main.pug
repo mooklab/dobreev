@@ -1,0 +1,126 @@
+section.main
+
+    div.breadcrumbs
+        a(href="index.html") Главная
+        span.divide »
+        a(href="catalog.html") Каталог
+        span.divide »
+        a(href="categories.html") Сантехника
+        span.divide »
+        span.current Циркулярная пила Спец БЦП-1300, 1550 Вт, 185 мм
+
+    div.container
+        
+        div.product_gallery
+            div.swiper.gallery
+                div.swiper-wrapper
+                    div.swiper-slide: img(src="images/products/1/1.webp", alt="")
+                    div.swiper-slide: img(src="images/products/1/2.webp", alt="")
+                    div.swiper-slide: img(src="images/products/1/3.webp", alt="")
+                    div.swiper-slide: img(src="images/products/1/4.webp", alt="")
+                    div.swiper-slide: img(src="images/products/1/5.webp", alt="")
+            div.swiper.thumbs
+                div.swiper-wrapper
+                    div.swiper-slide: img(src="images/products/1/1.webp", alt="")
+                    div.swiper-slide: img(src="images/products/1/2.webp", alt="")
+                    div.swiper-slide: img(src="images/products/1/3.webp", alt="")
+                    div.swiper-slide: img(src="images/products/1/4.webp", alt="")
+                    div.swiper-slide: img(src="images/products/1/5.webp", alt="")
+
+        div.about
+
+            div.description
+                h1 Циркулярная пила Спец БЦП-1300, 1550 Вт, 185 мм
+
+                div.swiper.gallery
+                    div.swiper-wrapper
+                        div.swiper-slide: img(src="images/products/1/1.webp", alt="")
+                        div.swiper-slide: img(src="images/products/1/2.webp", alt="")
+                        div.swiper-slide: img(src="images/products/1/3.webp", alt="")
+                        div.swiper-slide: img(src="images/products/1/4.webp", alt="")
+                        div.swiper-slide: img(src="images/products/1/5.webp", alt="")
+                    div.swiper-navigation
+                        div.arrow
+                            include ../../../images/swiper_arrow.svg
+                        div.arrow
+                            include ../../../images/swiper_arrow.svg
+
+                span.title О товаре
+                p Ищете смеситель, который не разбрызгивает воду в стороны? Поздравляем, вы его нашли – Lemark Linara LM0406C. Благодаря аэратору создается мягкий поток, что помогает контролировать расход. Керамический картридж диаметром 35 мм плавно смешивает горячую и холодную воду, позволяя регулировать ее до нужной температуры. Длина излива 149 мм подойдет для стандартных раковин.
+            
+            div.price
+                span.title Цена
+                div
+                    span.old 47 100
+                    span.current 34 800₽
+                button
+                    span В КОРЗИНУ
+                    div.icon
+                        img(src="images/cart_add.svg", alt="")
+
+            div.params
+                div.color
+                    span Цвет
+                    div(style="background-color: #B5DFEB; ")
+                    div(style="background-color: #ffffff; border: 1px solid #EDEEEC;")
+                div.material
+                    span Материал:
+                    span Сталь
+
+            div.specs
+                span.title Технические характеристики
+                div.list
+                    span Страна
+                    span Россия
+                    span Срок службы
+                    span 5 лет
+                    span Модель
+                    span Supersonic HD07
+                    span Количество температурных режимов
+                    span 4
+                    span Страна
+                    span Россия
+                    span Срок службы
+                    span 5 лет
+                    span Модель
+                    span Supersonic HD07
+                    span Количество температурных режимов
+                    span 4
+                    span Страна
+                    span Россия
+                    span Срок службы
+                    span 5 лет
+                    span Модель
+                    span Supersonic HD07
+                    span Количество температурных режимов
+                    span 4
+                a(onclick="this.parentNode.classList.toggle('full')").more Все характеристики
+
+            form
+                span.title Есть вопросы по товару?
+                div.row
+                    input(type="text", placeholder="Имя")
+                    input(type="email", placeholder="E-mail")
+                textarea(placeholder="Вопрос")
+                button Отправить
+
+        div.order
+            div.price
+                span.title Цена
+                span.old 47 100
+                span.current 34 800₽
+                button
+                    span В КОРЗИНУ
+                    div.icon
+                        img(src="images/cart_add.svg", alt="")
+
+            div.alert
+                img(src="images/alert.svg", alt="Осталось мало")
+                div.text
+                    span Этого товара осталось мало! #[br]Успей купить по акции.
+                    span.count В наличии 5 шт.
+
+
+
+
+

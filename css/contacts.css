@@ -1,1 +1,136 @@
-/*# sourceMappingURL=contacts.css.map */
+section.map div.container {
+  display: grid;
+}
+section.map div.title {
+  display: grid;
+  -ms-flex-line-pack: end;
+      align-content: end;
+  grid-template-columns: 1fr 377px;
+  grid-gap: 30px;
+  margin-bottom: 28px;
+}
+@media (max-width: 960px) {
+  section.map div.title {
+    margin-bottom: 20px;
+    grid-template-columns: 1fr;
+    margin-bottom: 12px;
+  }
+}
+section.map fieldset.select div.select_current span {
+  background: #F8FAF7;
+  border: unset;
+}
+section.map div#map {
+  width: 100%;
+  height: 600px;
+}
+
+section.contacts {
+  margin-top: 40px;
+  margin-bottom: var(--section-gap);
+}
+@media (max-width: 960px) {
+  section.contacts {
+    margin-top: 20px;
+  }
+}
+section.contacts div.list {
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+@media (max-width: 960px) {
+  section.contacts div.list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px 20px;
+  }
+}
+@media (max-width: 640px) {
+  section.contacts div.list {
+    grid-template-columns: 1fr;
+  }
+}
+section.contacts div.contact {
+  display: grid;
+}
+section.contacts div.contact h3 {
+  margin-bottom: 9px;
+}
+section.contacts div.contact span.address {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 157%;
+  color: #adb3a7;
+  margin-bottom: 24px;
+}
+section.contacts div.contact hr {
+  height: 1px;
+  width: 100%;
+  background: #eee;
+  margin-bottom: 19px;
+}
+section.contacts div.contact a.phone {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: -webkit-max-content auto;
+  grid-template-columns: max-content auto;
+  grid-gap: 9px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 157%;
+  color: #313b30;
+}
+
+section.question {
+  margin-top: var(--section-gap);
+  margin-bottom: var(--section-gap);
+}
+section.question form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  margin-top: 24px;
+}
+@media (max-width: 960px) {
+  section.question form {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 28px;
+  }
+}
+@media (max-width: 640px) {
+  section.question form {
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+  }
+}
+section.question form div.merge {
+  grid-column: 2 span;
+  display: grid;
+  grid-template-columns: 1fr -webkit-max-content;
+  grid-template-columns: 1fr max-content;
+  grid-gap: 20px;
+}
+@media (max-width: 640px) {
+  section.question form div.merge {
+    grid-column: 1 span;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+  }
+  section.question form div.merge button {
+    width: 100%;
+  }
+}
+@media (max-width: 960px) {
+  section.question form div.empty {
+    display: none;
+  }
+}
+section.question form input {
+  background: transparent;
+  border: 1px solid #e9ebe6;
+}/*# sourceMappingURL=contacts.css.map */

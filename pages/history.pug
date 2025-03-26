@@ -1,7 +1,12 @@
 extends common/pug/_layout.pug
+include common/pug/_mixins.pug
 
 block links
     link(rel="stylesheet", href="css/history.css")
 
 block content
-    //- include sections/index/_main.pug
+    include sections/history/_main.pug
+
+    - var section_class = 'often'
+    - var section_title = 'Акции для вас'
+    include sections/_products.pug

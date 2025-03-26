@@ -1,0 +1,88 @@
+section.banners
+    margin-top: var(--section-gap)
+    margin-bottom: var(--section-gap)
+
+    div.container
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 20px
+        +screen(m)
+            grid-template-columns: 1fr
+            grid-gap: 16px
+
+    div.find, div.subscribe
+        display: grid
+        align-items: center
+        grid-template-columns: repeat(2, 1fr)
+        padding: 45px
+        border-radius: 4px
+        +screen(s)
+            grid-template-columns: 1fr
+            grid-gap: 10px
+            padding: 35px 20px
+            padding-top: 11px
+            text-align: center
+
+        img
+            height: 290px
+            width: 100%
+            object-fit: contain
+            object-position: center center
+            +screen(m)
+                height: 233px
+
+        div.text
+            display: grid
+            +screen(s)
+                justify-items: center
+            h2
+                font-weight: 300
+                font-size: 32px
+                line-height: 112%
+                +screen(m)
+                    font-size: 20px
+                    line-height: 130%
+
+    div.find
+        background: #faf4cd
+        h2
+            color: rgba(49, 59, 48, 0.8)
+            margin-bottom: 14px
+        span
+            font-weight: 400
+            font-size: 13px
+            color: #98947d
+            margin-bottom: 24px
+            +screen(s)
+                max-width: 297px
+                margin-bottom: 20px
+            a
+                text-decoration: underline
+                &:hover
+                    text-decoration: none
+
+    div.subscribe
+        background: #4faa4b
+        h2
+            color: white
+            margin-bottom: 20px
+        form
+            display: grid
+            justify-items: end
+            grid-gap: 14px
+            +screen(s)
+                width: 100%
+                justify-items: center
+
+            input
+                border: 1px solid rgba(255, 255, 255, 0.4) !important
+                background: transparent
+                color: white
+                &::placeholder
+                    color: white
+
+            button
+                background: #F9D908
+                color: #685B06
+                +screen(s)
+                    width: 100%

@@ -1,0 +1,27 @@
+section.main
+    margin-bottom: var(--section-gap)
+
+    h1
+        margin-bottom: 24px
+
+    div.list
+        display: grid
+        grid-template-columns: repeat(6, 1fr)
+        grid-gap: 20px
+        +screen(xl)
+            grid-template-columns: repeat(3, 1fr)
+        +screen(m)
+            grid-template-columns: repeat(2, 1fr)
+        +screen(s)
+            grid-template-columns: 1fr
+
+
+
+
+
+
+
+
+
+
+

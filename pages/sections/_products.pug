@@ -1,0 +1,50 @@
+//- brand - Проверенный брэнд
+//- hits - Хиты продаж
+//- useful - Может пригодиться
+//- watched - Вы смотрели
+
+section(class=section_class).products
+    div.container
+
+        div.title
+            h2= section_title ? section_title : 'Товары'
+            - if( section_class == 'useful' )
+                div.tags
+                    a(href="category.html").tag Садовая техника
+                    a(href="category.html").tag Инструменты для дома
+                    a(href="category.html").tag Инструменты для сада
+            - if( section_class != 'watched' && section_class != 'often' )
+                a(href="catalog.html").more Смотреть все
+            div.swiper-navigation
+                div.arrow
+                    include ../../images/swiper_arrow.svg
+                div.arrow
+                    include ../../images/swiper_arrow.svg
+
+        div.swiper.products_swiper
+            div.swiper-wrapper
+                div.swiper-slide
+                    +product('1', '82245637', 'Циркулярная пила Спец БЦП-1300, 1550 Вт, 185 мм', '4825', '0', 'Хит продаж', 'Новинка')
+                div.swiper-slide
+                    +product('2', '89366084', 'Дрель-шуруповерт аккумуляторная Deko ZKCD12 084-1008, 12 В Li-ion 1.5 Ач', '1990', '0', 'Осталось мало')
+                div.swiper-slide
+                    +product('3','89372984', 'Сварочный аппарат инверторный Elitech ИСА200, 200 А, до 5 мм', '3490', '12', 'Новинка')
+                - if( section_class != 'watched' )
+                    div.swiper-slide
+                        +product('4','89386578', 'Генератор бензиновый Kronwerk LK-2800R, 2.8 кВт', '14000', '0')
+                    - if( section_class != 'recommended' )
+                        div.swiper-slide
+                            +product('5','92171358', 'Компрессор поршневой безмасляный Daewoo DAC 240S, 24 л, 240 л/мин', '19890', '0', 'Хит продаж')
+                        div.swiper-slide
+                            +product('6','92141944', 'Уровень лазерный Ermenrich LN20 зеленый луч дельность до 30 м', '6990', '0')
+                        div.swiper-slide
+                            +product('7','85087834', 'Набор инструментов ручных Вихрь 3/6/7/3, 82 предмета', '7884', '0', 'Осталось мало')
+                        div.swiper-slide
+                            +product('8','89370287', 'Миксер строительный сетевой Deko DKM1900, 1900 Вт', '5990', '16', 'Новинка')
+                        div.swiper-slide
+                            +product('9','89363227', 'Нивелир лазерный Elitech ПЛ 4К штатив в комплекте, 15 м', '5415', '0', 'Хит продаж', 'Новинка')
+                        div.swiper-slide
+                            +product('10','12829182', 'Ящик для инструмента Systec BEX19-3 240x230x500 мм, пластик, цвет чёрно-жёлтый', '1061', '0', 'Осталось мало')
+
+        - if( section_class == 'hits' )
+            a(href="catalog.html").more Смотреть все

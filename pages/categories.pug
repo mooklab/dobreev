@@ -1,7 +1,18 @@
 extends common/pug/_layout.pug
+include common/pug/_mixins.pug
 
 block links
     link(rel="stylesheet", href="css/categories.css")
 
 block content
-    //- include sections/index/_main.pug
+    include sections/categories/_main.pug
+
+    - var section_class = 'often'
+    - var section_title = 'Часто ищут'
+    include sections/_products.pug
+    
+    include sections/_articles.pug
+
+    - var section_class = 'useful'
+    - var section_title = 'Может пригодиться'
+    include sections/_products.pug

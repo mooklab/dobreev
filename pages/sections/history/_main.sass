@@ -1,0 +1,12 @@
+section.main
+    div.list
+        display: grid
+        grid-template-columns: repeat(5, 1fr)
+        grid-gap: 20px
+        +screen(xl)
+            grid-template-columns: repeat(4, 1fr)
+        +screen(m)
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 8px
+        +screen(s)
+            grid-template-columns: 1fr

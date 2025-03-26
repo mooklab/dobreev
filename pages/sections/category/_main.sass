@@ -1,0 +1,302 @@
+section.main
+
+    div.wrap
+        display: grid
+        align-items: start
+        grid-template-columns: 276px 1fr
+        grid-gap: 20px
+        +screen(l)
+            grid-template-columns: 1fr
+
+    div.breadcrumbs
+        grid-column: 2 span
+
+    div.filter
+        +screen(l)
+            display: none
+
+        div.cross
+            cursor: pointer
+            width: 10px
+            height: 10px
+            position: absolute
+            top: 20px
+            right: 20px
+            z-index: 3
+            svg
+                rect
+                    fill: #5AB356
+        
+        form
+            display: grid
+            grid-gap: 24px
+            border: 1px solid #ececec
+            border-radius: 4px
+            padding: 18px 24px 44px
+            +screen(l)
+                position: fixed
+                right: 0
+                top: 0
+                background: white
+                z-index: 2
+                overflow-y: auto
+                height: 100%
+                width: 100%
+                max-width: 320px
+                box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.12)
+                padding-top: 40px
+                &::-webkit-scrollbar
+                    display: none
+
+        h3
+            font-weight: 300
+            font-size: 16px
+            color: #313b30
+            margin-bottom: 12px
+
+        hr
+            height: 1px
+            width: 100%
+            background: #f2f5ef
+                
+        div.checkboxes
+            display: grid
+            grid-gap: 14px
+            &.colors
+                display: flex
+                gap: 8px
+                span
+                    padding: unset
+                    margin: unset
+                    cursor: pointer
+                span:before
+                    display: none
+                span:after
+                    background-image: url(../images/color_tick.svg)
+                    top: 8px
+                    left: 7px
+                    width: 10px
+                    height: 8px
+
+        fieldset.search
+            position: relative
+            margin-bottom: 14px
+
+            input
+                background: transparent
+                border: 1px solid #e9ebe6
+
+            svg
+                position: absolute
+                top: 50%
+                right: 9px
+                transform: translateY(-50%)
+                path
+                    stroke-width: 2px
+                    stroke: #4FAA4B
+
+        div.background
+            position: fixed
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: rgba(0,0,0, 0.5)
+            z-index: 1
+            display: none
+            +screen(l)
+                display: block
+
+        &.show
+            display: grid
+            position: fixed
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: 10
+
+    div.grid
+        div.title
+            display: flex
+            align-items: flex-end
+            flex-wrap: wrap
+            gap: 27px
+            margin-bottom: 12px
+            span
+                font-weight: 400
+                font-size: 12px
+                color: #adb3a7
+                padding-bottom: 4px
+
+    div.sort
+        display: grid
+        align-items: center
+        grid-template-columns: 1fr
+        grid-auto-flow: column
+        grid-auto-columns: max-content
+        grid-gap: 24px
+        margin-bottom: 24px
+        +screen(m)
+            grid-template-columns: 1fr max-content
+            grid-auto-flow: row
+            grid-gap: 20px
+
+        div.tags
+            display: flex
+            flex-wrap: wrap
+            gap: 4px
+            +screen(m)
+                grid-column: 2 span
+                overflow-x: scroll
+                flex-wrap: nowrap
+                width: calc(100% + var(--gap) * 2)
+                margin-left: calc(var(--gap) * -1)
+                padding: 0 var(--gap)
+                order: 3
+                &::-webkit-scrollbar
+                    opacity: 0
+                    display: none
+                    height: 0
+                    width: 0
+
+            a
+                font-weight: 400
+                font-size: 12px
+                color: #536452
+                border: 1px solid #d9d9d9
+                border-radius: 4px
+                padding: 4.5px 15px
+                white-space: nowrap
+                &:hover
+                    background: #DCDED7
+
+        div.view
+            display: grid
+            grid-template-columns: repeat(2, max-content)
+            grid-gap: 24px
+            +screen(m)
+                display: none
+
+        fieldset.select
+            min-width: 147px
+            width: max-content
+            +screen(m)
+                order: 1
+
+            div.select_current
+                span
+                    background: #f8faf7
+                    border: unset
+
+        div.mobile_filter
+            cursor: pointer
+            display: grid
+            grid-auto-flow: column
+            grid-auto-columns: max-content
+            grid-gap: 3px
+            font-weight: 400
+            font-size: 13px
+            color: #536452
+            display: none
+            +screen(l)
+                display: grid
+            +screen(m)
+                order: 2
+
+            span.count
+                display: grid
+                align-items: center
+                justify-items: center
+                width: 16px
+                height: 16px
+                padding: 0 5px
+                background: #FFE032
+                border-radius: 999px
+                font-weight: 300
+                font-size: 10px
+                line-height: 1em
+                color: #ac8400
+                white-space: nowrap
+
+    div.products
+        display: grid
+        grid-template-columns: repeat(5, 1fr)
+        grid-gap: 20px
+        +screen(xl)
+            grid-template-columns: repeat(4, 1fr)
+        +screen(m)
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 8px
+        +screen(s)
+            grid-template-columns: 1fr
+
+        a.product
+            +screen(m)
+                grid-template-areas: 'Swiper Article' 'Swiper Title' 'Swiper Order'
+                gap: unset
+                padding: 16px
+                padding-left: 10px
+
+                div.favourite
+                    top: 10px
+                    right: 10px
+
+                div.swiper
+                    grid-area: Swiper
+                    pointer-events: none
+                    width: 117px
+                    margin-right: 16px
+                    margin-bottom: unset
+
+                div.article
+                    grid-area: Article
+
+                div.title
+                    grid-area: Title
+                    margin-bottom: 16px
+
+                div.order
+                    grid-area: Order
+
+                &:has(div.tags)
+                    grid-template-areas: 'Tags Tags' 'Swiper Article' 'Swiper Title' 'Swiper Order'
+                    div.tags
+                        grid-area: Tags
+                        position: relative
+                        top: -6px
+                        left: 0px
+                        display: flex
+                        flex-wrap: wrap
+                        margin-bottom: 24px
+
+    div.control
+        position: relative
+        display: grid
+        justify-items: center
+        margin-top: 40px
+        +screen(m)
+            margin-top: 24px
+
+        div.pagination
+            position: absolute
+            top: 50%
+            right: 0
+            transform: translateY(-50%)
+            display: flex
+            gap: 15px
+            font-weight: 300
+            font-size: 16px
+            line-height: 137%
+            color: rgba(49, 59, 48, 0.8)
+            +screen(m)
+                display: none
+
+            a.current
+                font-weight: 400
+                color: #4faa4b
+                
+            span
+                color: #4faa4b
+
+        

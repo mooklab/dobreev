@@ -1,7 +1,23 @@
 extends common/pug/_layout.pug
+include common/pug/_mixins.pug
 
 block links
     link(rel="stylesheet", href="css/product.css")
 
 block content
-    //- include sections/index/_main.pug
+    include sections/product/_main.pug
+    include sections/product/_about.pug
+
+    - var section_class = 'brand'
+    - var section_title = 'Может пригодиться'
+    include sections/_products.pug
+
+    - var section_class = 'watched'
+    - var section_title = 'С этим товаром покупают'
+    include sections/_products.pug
+
+    - var section_class = 'watched'
+    - var section_title = 'Вы смотрели'
+    include sections/_products.pug
+
+    include sections/_articles.pug

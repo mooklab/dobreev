@@ -40,18 +40,23 @@ section.main
             text-transform: uppercase
             padding: 10px 25px
 
-
     div.banners
         display: grid
         grid-template-columns: repeat(6, 1fr)
         grid-gap: 20px
         +screen(s)
             grid-template-columns: 1fr
+            grid-gap: 8px
 
         div.banner
             position: relative
             height: 420px
             padding: 40px
+            border-radius: 4px
+            overflow: hidden
+            +screen(s)
+                padding: 16px
+                height: auto
             img.background
                 position: absolute
                 top: 0
@@ -81,12 +86,20 @@ section.main
                     +screen(m)
                         font-weight: 400
                         font-size: 20px
+                        line-height: unset
+                        margin-bottom: 4px
                 span
                     font-weight: 300
                     font-size: 18px
                     line-height: 133%
                     color: #313b30
                     margin-bottom: 25px
+                    +screen(m)
+                        font-weight: 300
+                        font-size: 13px
+                        line-height: 169%
+                        color: #313b30
+                        margin-bottom: 38px
 
             &:nth-child(2)
                 display: grid
@@ -116,6 +129,9 @@ section.main
                     color: #313b30
                     max-width: 264px
                     margin-bottom: 30px
+                    +screen(s)
+                        flex-direction: column
+                        align-items: start
                     li
                         display: grid
                         grid-template-columns: max-content 1fr

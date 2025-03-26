@@ -1,0 +1,145 @@
+mixin cart_product(image)
+    div.product
+        div(onclick="event.preventDefault();this.classList.toggle('added')").favourite
+            include ../../../images/favourite.svg
+        div(onclick="this.parentNode.remove()").trash
+            include ../../../images/trash.svg
+        div(onclick="this.parentNode.classList.toggle('checked')").checkbox
+        img(src=image, alt="")
+        div.text
+            div.tags
+                span.tag хит продаж
+                span.tag новинка
+            span.article 17467
+            a.title Универсальный смеситель Olive's BALEAR нержавеющая сталь
+
+        div.price
+            span.old 7 100
+            span.current 4 120₽
+            span.count В наличии > 100 шт.
+
+        div.quantity
+            div.minus
+                include ../../../images/quanitty_minus.svg
+            input(type="number", value="1", min="1", max="99")
+            div.plus
+                include ../../../images/quanitty_plus.svg
+
+section.main
+    div.container
+
+        div.breadcrumbs
+            a(href="index.html") Главная
+            span.divide »
+            span.current Корзина
+
+        div.wrap
+
+            div.cart
+                h1 Корзина
+
+                div.products
+
+                    div.list_head
+                        label(onclick="event.stopPropagation(); this.querySelector('input').checked == true ? this.closest('div.cart').querySelectorAll('div.list div.product').forEach(product=>product.classList.add('checked')) : this.closest('div.cart').querySelectorAll('div.list div.product').forEach(product=>product.classList.remove('checked'))")
+                            input(type="checkbox", name="")
+                            span Выбрать все
+                        div(onclick="this.closest('div.cart').querySelectorAll('div.list div.product.checked').forEach(product=>product.remove())").trash
+                            include ../../../images/trash.svg
+                            
+                    div.list
+                        +cart_product('images/products/1/1.webp')
+                        +cart_product('images/products/2/1.webp')
+                        +cart_product('images/products/3/1.webp')
+
+                div.deliveries
+                    h2 Способ доставки
+                    div.list
+                        label.delivery
+                            input(type="radio", name="delivery", checked)
+                            div.description
+                                span Самовывоз из магазина
+                                span 30 магазинов
+                        label.delivery
+                            input(type="radio", name="delivery")
+                            div.description
+                                span Доставка курьером
+                                span сегодня,  от 300₽
+                        label.delivery
+                            input(type="radio", name="delivery")
+                            div.description
+                                span Транспортная компания
+                                span рассчитать доставку
+
+                    h3 Выбранный пункт самовывоза и дату
+
+                    div.adress
+                        div.contact
+                            h3 СтройМаркет Добреев
+                            span.address Балтаси, ул. Ленина 18
+                            hr
+                            a(href="tel:+7 (83347) 2-12-13").phone
+                                include ../../../images/phone.svg
+                                span +7 (83347) 2-12-13
+                            a.button ИЗМЕНИТЬ МАГАЗИН
+                        img(src="images/map.webp", alt="")
+
+                div.dates
+                    div.list
+                        label.date
+                            input(type="radio", name="date", checked)
+                            include ../../../images/calendar.svg
+                            div
+                                strong 24 января
+                                span пятница
+                        label.date
+                            input(type="radio", name="date")
+                            include ../../../images/calendar.svg
+                            div
+                                strong 25 января
+                                span суббота
+                        label.date
+                            input(type="radio", name="date")
+                            include ../../../images/calendar.svg
+                            div
+                                strong 26 января
+                                span воскресенье
+
+                div.payments
+                    h2 Способ оплаты
+                    div.list
+                        label.payment
+                            input(type="radio", name="payment", checked)
+                            img(src="images/payment_qr.svg")
+                            div
+                                strong Оплата по QR-коду
+                                span Начисление и списание бонусов СберСпасибо недоступно
+                        label.payment
+                            input(type="radio", name="payment")
+                            img(src="images/payment_card.svg")
+                            div
+                                strong Онлайн-оплата картой
+                                span Начисление и списание бонусов СберСпасибо недоступно
+                        label.payment
+                            input(type="radio", name="payment")
+                            img(src="images/payment_money.svg")
+                            div
+                                strong Наличными или картой
+                                span При получении товара
+
+            div.results
+                div.delivery
+                    span доставка
+                    span г.Воронеж, Варшавское шоссе, д. 72к2
+                div.payment
+                    span оплата
+                    span наличными
+                div.count
+                    span.count 2 товара
+                    span.price 4 120₽
+                    span.note скидка
+                    span.discount 1 120
+                div.total
+                    span ИТОГО
+                    span 3 000₽
+                a.button Заказать

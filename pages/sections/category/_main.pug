@@ -1,0 +1,107 @@
+section.main
+    div.container
+
+        div.breadcrumbs
+            a(href="index.html") Главная
+            span.divide »
+            a(href="catalog.html") Каталог
+            span.divide »
+            a(href="categories.html") Сантехника
+            span.divide »
+            span.current Смесители
+
+        div.wrap
+
+            div.filter
+                form
+                    div(onclick="this.closest('div.filter').classList.remove('show')").cross
+                        include ../../../images/cross.svg
+
+                    div.block
+                        h3 Цена
+                        +range('Плотность светодиодов, шт/м', 2500, 100000)
+
+
+                    div.block
+                        h3 Производитель
+                        fieldset.search
+                            include ../../../images/search.svg
+                            input(type="search", name="", placeholder="Найти", oninput="console.log(this.value)")
+                        +checkboxes('material', 'Axor <pre>23</pre>', 'Duravit <pre>23</pre>', 'Galassia <pre>113</pre>', 'GSI <pre>11</pre>', 'Globo', 'Grohe', 'Axor', 'Duravit', 'Galassia', 'GSI', 'Globo', 'Grohe')
+                    
+                    hr
+            
+                    div.block
+                        h3 Назначение
+                        +select('target', 'Выбрать', 'Для ванной', 'Для кухни', 'Для туалета', 'Комплекты')
+
+                    hr
+
+                    div.block
+                        h3 Материал
+                        +checkboxes('materials', 'Латунь', 'Сталь')
+
+                    div.block
+                        h3 Цвет
+                        +checkboxes('colors',
+                            '<div class="color" style="background-color: #4FAA4B;"></div>', 
+                            '<div class="color" style="background-color: #B5DFEB;"></div>',
+                            '<div class="color" style="background-color: #FFFFFF; border: 1px solid #EDEEEC"></div>')
+                div(onclick="this.closest('div.filter').classList.remove('show')").background
+
+            div.grid
+
+                div.title
+                    h1 Смесители
+                    span 800 товаров
+
+                div.sort
+                    div.tags
+                        a(href="category.html")  Для ванной
+                        a(href="category.html")  Для кухни
+                        a(href="category.html")  Для туалета
+                        a(href="category.html")  Комплекты
+
+                    +select('sort', 'по популярности', 'по цене')
+                        label(for='sort') по популярности
+
+                    div(onclick="this.closest('div.wrap').querySelector('div.filter').classList.add('show')").mobile_filter
+                        span Фильтры
+                        span.count 2
+
+                    div.view
+                        div.grid
+                            include ../../../images/grid.svg
+                        div.view
+                            include ../../../images/list.svg
+
+                div.products
+                    +product('1', '82245637', 'Циркулярная пила Спец БЦП-1300, 1550 Вт, 185 мм', '4825', '0', 'Хит продаж', 'Новинка')
+                    +product('2', '89366084', 'Дрель-шуруповерт аккумуляторная Deko ZKCD12 084-1008, 12 В Li-ion 1.5 Ач', '1990', '0')
+                    +product('3','89372984', 'Сварочный аппарат инверторный Elitech ИСА200, 200 А, до 5 мм', '3490', '0', 'Новинка')
+                    +product('4','89386578', 'Генератор бензиновый Kronwerk LK-2800R, 2.8 кВт', '14000', '0')
+                    +product('5','92171358', 'Компрессор поршневой безмасляный Daewoo DAC 240S, 24 л, 240 л/мин', '19890', '0')
+                    +product('6','92141944', 'Уровень лазерный Ermenrich LN20 зеленый луч дельность до 30 м', '6990', '0')
+                    +product('7','85087834', 'Набор инструментов ручных Вихрь 3/6/7/3, 82 предмета', '7884', '0', 'Осталось мало')
+                    +product('8','89370287', 'Миксер строительный сетевой Deko DKM1900, 1900 Вт', '5990', '16')
+                    +product('9','89363227', 'Нивелир лазерный Elitech ПЛ 4К штатив в комплекте, 15 м', '5415', '0')
+                    +product('10','12829182', 'Ящик для инструмента Systec BEX19-3 240x230x500 мм, пластик, цвет чёрно-жёлтый', '1061', '0', 'Хит продаж', 'Новинка')
+                    +product('1', '82245637', 'Циркулярная пила Спец БЦП-1300, 1550 Вт, 185 мм', '4825', '0', 'Хит продаж', 'Новинка')
+                    +product('2', '89366084', 'Дрель-шуруповерт аккумуляторная Deko ZKCD12 084-1008, 12 В Li-ion 1.5 Ач', '1990', '0')
+                    +product('3','89372984', 'Сварочный аппарат инверторный Elitech ИСА200, 200 А, до 5 мм', '3490', '0', 'Новинка')
+                    +product('4','89386578', 'Генератор бензиновый Kronwerk LK-2800R, 2.8 кВт', '14000', '0')
+                    +product('5','92171358', 'Компрессор поршневой безмасляный Daewoo DAC 240S, 24 л, 240 л/мин', '19890', '0')
+                    +product('6','92141944', 'Уровень лазерный Ermenrich LN20 зеленый луч дельность до 30 м', '6990', '0')
+                    +product('7','85087834', 'Набор инструментов ручных Вихрь 3/6/7/3, 82 предмета', '7884', '0', 'Осталось мало')
+                    +product('8','89370287', 'Миксер строительный сетевой Deko DKM1900, 1900 Вт', '5990', '16')
+                    +product('9','89363227', 'Нивелир лазерный Elitech ПЛ 4К штатив в комплекте, 15 м', '5415', '0')
+                    +product('10','12829182', 'Ящик для инструмента Systec BEX19-3 240x230x500 мм, пластик, цвет чёрно-жёлтый', '1061', '0', 'Хит продаж', 'Новинка')
+
+        div.control
+            button Смотреть еще
+            div.pagination
+                a(href="category.html")  1
+                a(href="category.html").current 2
+                a(href="category.html")  3
+                span ...
+                a(href="category.html")  10

@@ -1,0 +1,35 @@
+section.main
+    div.container
+
+        div.breadcrumbs
+            a(href="index.html") Главная
+            span.divide »
+            span.current Новости
+
+        h1 Новости
+
+        div.article_big
+            img(src="images/7.webp", alt="Открылся новый магазин в Большой Кукмор")
+            div.description
+                h1 Открылся новый магазин #[br]в Большой Кукмор
+                span Искусственные ели – идеальный выбор для тех, кто ценит удобство и долговечность! Гирлянды : бахрома, занавес, нить, светодиодные ленты с пультом управления Хвойная лапа Шторы и аксессуары к ним – добавьте праздничных акцентов в интерьер вашего дома!
+                a(href="article.html").button Подробнее
+
+        div.list
+            +article('images/7.webp', '10 января 2024', 'Смеситель для кухни IDDIS Ace с фильтром и гибким изливом')
+            +article('images/8.webp', '10 января 2024', 'Смеситель для кухни IDDIS Ace с фильтром и гибким изливом')
+            +article('images/9.webp', '10 января 2024', 'Смеситель для кухни IDDIS Ace с фильтром и гибким изливом')
+            +article('images/10.webp', '10 января 2024', 'Смеситель для кухни IDDIS Ace с фильтром и гибким изливом')
+            +article('images/11.webp', '10 января 2024', 'Смеситель для кухни IDDIS Ace с фильтром и гибким изливом')
+            +article('images/12.webp', '10 января 2024', 'Смеситель для кухни IDDIS Ace с фильтром и гибким изливом')
+            +article('images/13.webp', '10 января 2024', 'Смеситель для кухни IDDIS Ace с фильтром и гибким изливом')
+            +article('images/3.webp', '10 января 2024', 'Смеситель для кухни IDDIS Ace с фильтром и гибким изливом')
+
+        div.control
+            button Смотреть еще
+            div.pagination
+                a(href="category.html")  1
+                a(href="category.html").current 2
+                a(href="category.html")  3
+                span ...
+                a(href="category.html")  10

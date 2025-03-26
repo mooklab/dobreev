@@ -1,0 +1,66 @@
+section.main
+
+    label.upload
+        cursor: pointer
+        position: relative
+        border-radius: 100%
+        border: 1px solid #ececec
+        width: 128px
+        height: 128px
+        input
+            display: none
+
+        &::after
+            content: ''
+            position: absolute
+            top: 50%
+            left: 50%
+            background-image: url(../images/upload_plus.svg)
+            width: 20px
+            height: 20px
+            transform: translate(-50%, -50%)
+
+    div.profile
+        display: grid
+        grid-template-columns: 128px 1fr
+        grid-gap: 20px
+
+        span.name
+            display: block
+            font-weight: 300
+            font-size: 20px
+            line-height: 110%
+            color: #313b30
+            margin-top: 53px
+            margin-bottom: 53px
+
+        span.title
+            display: block
+            font-weight: 300
+            font-size: 16px
+            line-height: 137%
+            color: #313b30
+            margin-bottom: 12px
+
+        div.name, div.contacts
+            margin-bottom: 30px
+
+        div.name, div.contacts, div.password
+            display: grid
+            grid-gap: 10px
+
+        form
+            max-width: 377px
+
+        div.password
+            input
+                background: white
+                border: 1px solid #e9ebe6
+
+        div.buttons
+            display: grid
+            justify-content: end
+            align-items: center
+            grid-template-columns: repeat(2, max-content)
+            grid-gap: 24px
+            margin-top: 10px

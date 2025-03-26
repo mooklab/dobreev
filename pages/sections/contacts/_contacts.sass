@@ -1,0 +1,45 @@
+section.contacts
+    margin-top: 40px
+    margin-bottom: var(--section-gap)
+    +screen(m)
+        margin-top: 20px
+
+    div.list
+        display: grid
+        align-items: start
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: 20px
+        +screen(m)
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 40px 20px
+        +screen(s)
+            grid-template-columns: 1fr
+
+    div.contact
+        display: grid
+
+        h3
+            margin-bottom: 9px
+
+        span.address
+            font-weight: 300
+            font-size: 14px
+            line-height: 157%
+            color: #adb3a7
+            margin-bottom: 24px
+
+        hr
+            height: 1px
+            width: 100%
+            background: #eee
+            margin-bottom: 19px
+
+        a.phone
+            display: grid
+            align-items: center
+            grid-template-columns: max-content auto
+            grid-gap: 9px
+            font-weight: 300
+            font-size: 14px
+            line-height: 157%
+            color: #313b30

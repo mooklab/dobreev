@@ -1,0 +1,68 @@
+section.error
+    margin-top: 72px
+    margin-bottom: 36px
+    +screen(s)
+        margin-top: unset
+
+    div.container
+        display: grid
+        justify-items: center
+
+    span.error
+        font-weight: 300
+        font-size: 300px
+        line-height: 100%
+        color: #313b30
+        margin-bottom: 6px
+        +screen(m)
+            font-weight: 300
+            font-size: 190px
+            line-height: 116%
+            color: #313b30
+
+        span
+            font-size: inherit
+            font-weight: inherit
+            line-height: inherit
+            color: #4faa4b
+
+    h2
+        font-weight: 300
+        font-size: 36px
+        line-height: 117%
+        color: #313b30
+        margin-bottom: 16px
+        +screen(m)
+            font-weight: 300
+            font-size: 32px
+            line-height: 112%
+            text-align: center
+            color: #313b30
+            margin-bottom: 13px
+
+    span
+        font-weight: 300
+        font-size: 14px
+        line-height: 157%
+        text-align: center
+        color: rgba(137, 137, 137, 0.8)
+        br
+            +screen(m)
+                display: none
+
+    div.buttons
+        display: grid
+        grid-template-columns: repeat(2, max-content)
+        grid-gap: 12px
+        margin-top: 23px
+        +screen(s)
+            width: 100%
+            grid-template-columns: 1fr
+            margin-top: 50px
+            a.button
+                width: 100%
+
+        a.button.border
+            background: transparent
+            border: 1px solid #adb3a7
+            color: #536452

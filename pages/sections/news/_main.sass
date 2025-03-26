@@ -1,0 +1,89 @@
+section.main
+    margin-bottom: var(--section-gap)
+
+    div.container
+        display: grid
+
+        h1
+            margin-bottom: 24px
+            +screen(m)
+                margin-bottom: 20px
+
+    div.list
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: 24px 20px
+        +screen(m)
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 20px
+        +screen(s)
+            grid-template-columns: 1fr
+
+    div.article_big
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 20px
+        margin-bottom: 20px
+        background: #f3f5ef
+        +screen(m)
+            grid-template-columns: 1fr
+            background: unset
+            margin-bottom: 40px
+
+        img
+            width: 100%
+            height: 600px
+            object-fit: cover
+            +screen(m)
+                height: 240px
+
+        div.description
+            align-self: center
+            padding: 40px
+            max-width: 796px
+            +screen(m)
+                padding: unset
+
+            h1
+                margin-bottom: 30px
+                +screen(m)
+                    margin-bottom: 16px
+
+            span
+                display: block
+                font-weight: 300
+                font-size: 14px
+                line-height: 157%
+                color: #536452
+                margin-bottom: 24px
+                +screen(m)
+                    margin-bottom: 20px
+
+    div.control
+        position: relative
+        display: grid
+        justify-items: center
+        margin-top: 40px
+        +screen(m)
+            margin-top: 24px
+
+        div.pagination
+            position: absolute
+            top: 50%
+            right: 0
+            transform: translateY(-50%)
+            display: flex
+            gap: 15px
+            font-weight: 300
+            font-size: 16px
+            line-height: 137%
+            color: rgba(49, 59, 48, 0.8)
+            +screen(m)
+                display: none
+
+            a.current
+                font-weight: 400
+                color: #4faa4b
+
+            span
+                color: #4faa4b

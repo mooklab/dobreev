@@ -1,0 +1,34 @@
+section.map
+    div.container
+
+        div.breadcrumbs
+            a(href="index.html") Главная
+            span.divide »
+            span.current Контакты
+
+        div.title
+            h1 Контакты
+
+            fieldset.select.city
+                div(tabindex="0").select_current
+                    input(type="radio", id="city_0", value="Большой Кукмор 1", name="city", checked)
+                    span Большой Кукмор 1
+                    input(type="radio", id="city_1", value="СтройМаркет Добреев", name="city")
+                    span СтройМаркет Добреев
+                    input(type="radio", id="city_2", value="СтройБаза Добреев", name="city")
+                    span СтройБаза Добреев
+                    input(type="radio", id="city_3", value="Большой Кукмор 2", name="city")
+                    span Большой Кукмор 2
+                    div.arrow
+                        include ../../../images/select_arrow.svg
+                div.select_list
+                    label(for="city_0", onclick="map.setCenter([56.347065, 50.200436], 16);") Большой Кукмор 1
+                    label(for="city_1", onclick="map.setCenter([56.514237, 50.661712], 16);") СтройМаркет Добреев
+                    label(for="city_2", onclick="map.setCenter([56.368479, 50.240146], 16);") СтройБаза Добреев
+                    label(for="city_3", onclick="map.setCenter([56.450175, 50.386593], 16);") Большой Кукмор 2
+
+        div#map
+
+
+script(defer, src="scripts/map.js")
+script(src="https://api-maps.yandex.ru/2.1/?lang=ru-RU", type="text/javascript")

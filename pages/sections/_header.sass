@@ -136,6 +136,7 @@ header
                     width: 100%
                     padding-left: 22px
                     border: 1px solid #e9ebe6
+                    border-radius: unset
                     border-top-right-radius: 4px
                     border-bottom-right-radius: 4px
                     border-left: unset
@@ -144,6 +145,7 @@ header
                     line-height: 137%
                     color: #313b30
                     height: 40px
+                    background: white
                     +screen(s)
                         border-radius: 4px
                         border: 1px solid #e9ebe6
@@ -195,9 +197,7 @@ header
                         font-size: 12px
 
                     b
-                        font-weight: 300
-                        font-size: 16px
-                        line-height: 137%
+                        font-weight: 400
                         color: #313b30
 
                     &:hover
@@ -244,7 +244,6 @@ header
         grid-column: full
         justify-items: center
         background: #4faa4b
-        
 
         div.container
             max-width: calc( var(--content-width) + var(--gap) )
@@ -258,7 +257,6 @@ header
                     display: none
                     height: 0
                     width: 0
-                
 
         menu
             display: grid
@@ -318,16 +316,23 @@ section.menu
                 &:last-child
                     border-bottom: unset
 
+                &:hover
+                    color: #4FAA4B
+
     div.category
         display: grid
         grid-gap: 20px
         background: white
         padding: 40px
+        display: none
         +screen(m)
             display: none
 
+        &.opened
+            display: grid
+
         div.accordion
-            
+
             div.accordion_caption
                 display: grid
                 grid-template-columns: max-content 1fr
@@ -383,8 +388,6 @@ section.menu
             border-top: 1px solid #f2f5ef
             border-bottom: 1px solid #f2f5ef
             padding: 14px 0
-            margin:  14px 0px 4px 28px
+            margin: 14px 0px 4px 28px
             a
                 color: #536452
-
-

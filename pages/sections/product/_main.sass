@@ -1,0 +1,346 @@
+section.main
+
+    div.container
+        display: grid
+        grid-template-columns: 1fr 572px 276px
+        grid-gap: 20px
+        +screen(xl)
+            grid-template-columns: 1fr 1fr 240px
+        +screen(l)
+            grid-template-columns: repeat(2, 1fr)
+        +screen(m)
+            grid-template-columns: 1fr
+
+    div.product_gallery
+        display: grid
+        grid-gap: 24px
+        +screen(m)
+            display: none
+
+        div.swiper.gallery
+            img
+                width: 100%
+                height: 700px
+                object-fit: contain
+                object-position: center center
+
+        div.swiper.thumbs
+            div.swiper-slide
+                border: 1px solid #E9EBE6
+
+                img
+                    width: 100%
+                    height: 200px
+                    object-fit: cover
+                    object-position: center center
+
+                &.swiper-slide-thumb-active
+                    border: 1px solid #4FAA4B
+
+    div.about
+
+        span.title
+            display: block
+            font-weight: 300
+            font-size: 16px
+            line-height: 137%
+            color: #313b30
+
+        div.description
+            display: grid
+            font-weight: 300
+            font-size: 16px
+            line-height: 137%
+            color: #313b30
+            padding-bottom: 24px
+            margin-bottom: 24px
+            border-bottom: 1px solid #e9ebe6
+
+            h1
+                margin-bottom: 46px
+                +screen(m)
+                    margin-bottom: 16px
+
+            span.title
+                margin-bottom: 12px
+
+            p
+                font-weight: 300
+                font-size: 14px
+                line-height: 157%
+                color: #536452
+
+            div.swiper
+                display: none
+                overflow: hidden
+                margin-bottom: 26px
+                +screen(m)
+                    display: block
+
+                img
+                    width: 100%
+                    height: 280px
+                    object-fit: contain
+                    object-position: center center
+
+            div.swiper-navigation
+                position: absolute
+                z-index: 1
+                justify-content: center
+                width: 100%
+                bottom: 10px
+
+        div.price
+            display: grid
+            grid-template-columns: max-content 1fr
+            grid-gap: 0 28px
+            background: #f2f5ef
+            padding: 16px
+            margin-bottom: 35px
+
+            div
+                display: grid
+
+            span.title
+                font-weight: 300
+                font-size: 16px
+                line-height: 137%
+                color: rgba(0, 0, 0, 0.8)
+                margin-bottom: 5px
+
+            span.old
+                font-weight: 300
+                font-size: 16px
+                line-height: 137%
+                text-decoration: line-through
+                color: rgba(190, 190, 190, 0.8)
+
+            span.current
+                font-weight: 300
+                font-size: 20px
+                line-height: 130%
+                color: rgba(0, 0, 0, 0.8)
+                margin-bottom: 22px
+
+            button
+                grid-column: 2 span
+                display: grid
+                grid-template-columns: 1fr max-content
+                height: auto
+                padding-top: 5px
+                padding-bottom: 5px
+                padding-right: 6px
+                width: 100%
+
+                span
+                    font-weight: 300
+                    font-size: 16px
+                    line-height: 162%
+                    color: rgba(255, 255, 255, 0.8)
+                    width: 100%
+                    text-align: center
+
+                div.icon
+                    display: grid
+                    align-items: center
+                    justify-items: center
+                    border-radius: 4px
+                    width: 44px
+                    height: 44px
+                    background: #fff
+
+        div.params
+            display: grid
+            grid-gap: 20px
+            border-bottom: 1px solid #e9ebe6
+            padding-bottom: 15px
+            margin-bottom: 24px
+            +screen(l)
+                border-top: 1px solid #e9ebe6
+                padding-top: 25px
+
+            div.color
+                display: flex
+                align-items: center
+                flex-wrap: wrap
+                gap: 7px
+
+                span
+                    margin-right: 3px
+                    font-weight: 300
+                    font-size: 14px
+                    line-height: 157%
+                    color: #adb3a7
+
+                div
+                    width: 24px
+                    height: 24px
+                    border-radius: 12px
+
+            div.material
+                display: flex
+                gap: 3px
+                span
+                    font-weight: 300
+                    font-size: 14px
+                    line-height: 157%
+                    color: #adb3a7
+                span:last-child
+                    font-weight: 300
+                    font-size: 14px
+                    line-height: 157%
+                    color: #536452
+
+        div.specs
+            padding-bottom: 24px
+            margin-bottom: 40px
+            border-bottom: 1px solid #e9ebe6
+
+            span.title
+                margin-bottom: 12px
+
+            div.list
+                display: grid
+                align-items: end
+                grid-template-columns: 1fr max-content
+                grid-gap: 12px 14px
+                margin-bottom: 16px
+
+                span:nth-child(2n - 1)
+                    display: grid
+                    align-items: end
+                    grid-template-columns: auto 1fr
+                    font-weight: 300
+                    font-size: 14px
+                    line-height: 157%
+                    color: #adb3a7
+                    &::after
+                        content: ''
+                        display: block
+                        width: 100%
+                        height: 1px
+                        border-bottom: 1px dashed #e9ebe6
+                        margin-bottom: 5px
+                        margin-left: 10px
+
+                span:nth-child(2n)
+                    font-weight: 300
+                    font-size: 14px
+                    line-height: 157%
+                    color: #536452
+
+                span:nth-child(n + 9)
+                    display: none
+
+            &.full
+                div.list
+                    span:nth-child(n + 9)
+                        display: grid
+
+        form
+            display: grid
+            grid-gap: 12px
+            +screen(m)
+                grid-gap: 8px
+
+            span.title
+                +screen(m)
+                    margin-bottom: 4px
+
+            div.row
+                display: grid
+                grid-auto-flow: column
+                grid-auto-columns: 1fr
+                grid-gap: 20px
+                +screen(s)
+                    display: contents
+
+            input, textarea
+                padding-left: 20px
+
+            button
+                justify-self: end
+
+    div.order
+        display: grid
+        align-content: start
+        grid-gap: 30px
+        +screen(l)
+            display: none
+
+        div.price
+            display: grid
+            background: #f2f5ef
+            padding: 16px
+
+            span.title
+                font-weight: 300
+                font-size: 16px
+                line-height: 137%
+                color: rgba(0, 0, 0, 0.8)
+                margin-bottom: 5px
+
+            span.old
+                font-weight: 300
+                font-size: 16px
+                line-height: 137%
+                text-decoration: line-through
+                color: rgba(190, 190, 190, 0.8)
+
+            span.current
+                font-weight: 300
+                font-size: 20px
+                line-height: 130%
+                color: rgba(0, 0, 0, 0.8)
+                margin-bottom: 25px
+
+            button
+                display: grid
+                grid-template-columns: 1fr max-content
+                height: auto
+                padding-top: 5px
+                padding-bottom: 5px
+                padding-right: 6px
+                width: 100%
+
+                span
+                    font-weight: 300
+                    font-size: 16px
+                    line-height: 162%
+                    color: rgba(255, 255, 255, 0.8)
+                    width: 100%
+                    text-align: center
+
+                div.icon
+                    display: grid
+                    align-items: center
+                    justify-items: center
+                    border-radius: 4px
+                    width: 44px
+                    height: 44px
+                    background: #fff
+
+        div.alert
+            background: #e95d5d
+            padding: 20px
+            padding-left: 27px
+            display: grid
+            grid-template-columns: max-content 1fr
+            grid-gap: 23px
+
+            div.text
+                display: grid
+                grid-gap: 6px
+
+            span
+                display: block
+                font-weight: 300
+                font-size: 14px
+                line-height: 143%
+                color: rgba(255, 255, 255, 0.8)
+
+            span.count
+                font-weight: 300
+                font-size: 12px
+                line-height: 183%
+                color: #fff

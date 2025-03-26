@@ -1,7 +1,10 @@
 extends common/pug/_layout.pug
+include common/pug/_mixins.pug
 
 block links
     link(rel="stylesheet", href="css/contacts.css")
 
 block content
-    //- include sections/index/_main.pug
+    include sections/contacts/_map.pug
+    include sections/contacts/_contacts.pug
+    include sections/_question.pug

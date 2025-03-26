@@ -1,1 +1,50 @@
-/*# sourceMappingURL=discount.css.map */
+section.main {
+  margin-bottom: var(--section-gap);
+}
+section.main div.container {
+  display: grid;
+}
+section.main div.container h1 {
+  margin-bottom: 24px;
+}
+@media (max-width: 960px) {
+  section.main div.container h1 {
+    margin-bottom: 20px;
+  }
+}
+section.main div.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 63px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 157%;
+  color: #536452;
+}
+@media (max-width: 960px) {
+  section.main div.content {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+}
+section.main div.content img {
+  width: 100%;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+@media (max-width: 960px) {
+  section.main div.content img {
+    height: 240px;
+  }
+}
+section.main div.content h2 {
+  margin-bottom: 26px;
+}
+@media (max-width: 960px) {
+  section.main div.content h2 {
+    margin-bottom: 20px;
+  }
+}/*# sourceMappingURL=discount.css.map */

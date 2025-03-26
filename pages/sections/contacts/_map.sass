@@ -1,0 +1,25 @@
+section.map
+
+    div.container
+        display: grid
+
+    div.title
+        display: grid
+        align-content: end
+        grid-template-columns: 1fr 377px
+        grid-gap: 30px
+        margin-bottom: 28px
+        +screen(m)
+            margin-bottom: 20px
+            grid-template-columns: 1fr
+            margin-bottom: 12px
+
+    fieldset.select
+        div.select_current
+            span
+                background: #F8FAF7
+                border: unset
+
+    div#map
+        width: 100%
+        height: 600px
