@@ -111,13 +111,18 @@ section.main div.about div.description div.swiper-navigation {
   bottom: 10px;
 }
 section.main div.about div.price {
-  display: grid;
+  display: none;
   grid-template-columns: -webkit-max-content 1fr;
   grid-template-columns: max-content 1fr;
   grid-gap: 0 28px;
   background: #f2f5ef;
   padding: 16px;
   margin-bottom: 35px;
+}
+@media (max-width: 1280px) {
+  section.main div.about div.price {
+    display: grid;
+  }
 }
 section.main div.about div.price div {
   display: grid;
@@ -274,8 +279,17 @@ section.main div.about div.specs div.list span:nth-child(2n) {
 section.main div.about div.specs div.list span:nth-child(n+9) {
   display: none;
 }
+section.main div.about div.specs a.more span:last-child {
+  display: none;
+}
 section.main div.about div.specs.full div.list span:nth-child(n+9) {
   display: grid;
+}
+section.main div.about div.specs.full a.more span:first-child {
+  display: none;
+}
+section.main div.about div.specs.full a.more span:last-child {
+  display: inline;
 }
 section.main div.about form {
   display: grid;

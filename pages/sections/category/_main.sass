@@ -16,6 +16,7 @@ section.main
             display: none
 
         div.cross
+            display: none
             cursor: pointer
             width: 10px
             height: 10px
@@ -23,10 +24,13 @@ section.main
             top: 20px
             right: 20px
             z-index: 3
+            +screen(l)
+                display: block
+
             svg
                 rect
                     fill: #5AB356
-        
+
         form
             display: grid
             grid-gap: 24px
@@ -58,7 +62,7 @@ section.main
             height: 1px
             width: 100%
             background: #f2f5ef
-                
+
         div.checkboxes
             display: grid
             grid-gap: 14px
@@ -295,8 +299,6 @@ section.main
             a.current
                 font-weight: 400
                 color: #4faa4b
-                
+
             span
                 color: #4faa4b
-
-        

@@ -91,12 +91,14 @@ section.main
                 bottom: 10px
 
         div.price
-            display: grid
+            display: none
             grid-template-columns: max-content 1fr
             grid-gap: 0 28px
             background: #f2f5ef
             padding: 16px
             margin-bottom: 35px
+            +screen(l)
+                display: grid
 
             div
                 display: grid
@@ -232,10 +234,19 @@ section.main
                 span:nth-child(n + 9)
                     display: none
 
+            a.more
+                span:last-child
+                    display: none
+
             &.full
                 div.list
                     span:nth-child(n + 9)
                         display: grid
+                a.more
+                    span:first-child
+                        display: none
+                    span:last-child
+                        display: inline
 
         form
             display: grid

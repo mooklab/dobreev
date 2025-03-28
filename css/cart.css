@@ -595,6 +595,9 @@ section.main div.dates label.date:has(input:checked) {
 section.main div.dates label.date:has(input:checked) svg path {
   stroke: #4FAA4B;
 }
+section.main div.dates label.date:has(input:checked) div strong {
+  color: #4FAA4B;
+}
 section.main div.payments {
   display: grid;
   grid-gap: 24px;
