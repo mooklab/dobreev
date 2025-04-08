@@ -112,9 +112,9 @@ section.main
             form
                 span.title Есть вопросы по товару?
                 div.row
-                    input(type="text", placeholder="Имя")
-                    input(type="email", placeholder="E-mail")
-                textarea(placeholder="Вопрос")
+                    label.input: input(type="text", placeholder="Имя*", required)
+                    label.input: input(type="email", placeholder="E-mail*", required)
+                label.input: textarea(placeholder="Вопрос*", required)
                 button Отправить
 
         div.order

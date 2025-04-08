@@ -761,6 +761,12 @@ section.banners div.subscribe form {
     justify-items: center;
   }
 }
+section.banners div.subscribe form label {
+  width: 100%;
+}
+section.banners div.subscribe form label.error::after {
+  color: white;
+}
 section.banners div.subscribe form input {
   border: 1px solid rgba(255, 255, 255, 0.4) !important;
   background: transparent;

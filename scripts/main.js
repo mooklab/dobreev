@@ -136,7 +136,7 @@ forms.forEach(form => {
     });
 
     // Handle invalid inputs
-    const inputs = form.querySelectorAll("input");
+    const inputs = form.querySelectorAll("input, textarea");
     inputs.forEach((input) => {
         input.addEventListener("invalid", (event) => {
             event.target.style.border = "1px solid red"; // Highlight invalid input
@@ -147,7 +147,7 @@ forms.forEach(form => {
         // Reset border on valid input
         input.addEventListener("input", () => {
             input.style.border = ""; // Remove red border when corrected
-            input.parentNode.classList.add('error')
+            input.parentNode.classList.remove('error')
         });
     });
 })

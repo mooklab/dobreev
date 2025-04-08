@@ -1521,10 +1521,16 @@
                         </div>
                         <form><span class="title">Есть вопросы по товару?</span>
                             <div class="row">
-                                <input type="text" placeholder="Имя">
-                                <input type="email" placeholder="E-mail">
+                                <label class="input">
+                                    <input type="text" placeholder="Имя*" required>
+                                </label>
+                                <label class="input">
+                                    <input type="email" placeholder="E-mail*" required>
+                                </label>
                             </div>
-                            <textarea placeholder="Вопрос"></textarea>
+                            <label class="input">
+                                <textarea placeholder="Вопрос*" required></textarea>
+                            </label>
                             <button>Отправить</button>
                         </form>
                     </div>

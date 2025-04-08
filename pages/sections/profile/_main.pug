@@ -22,17 +22,17 @@ section.main
                         span.name Иванова Светлана
                         span.title Персональные данные
                         div.name
-                            input(type="text", value="Иванова")
-                            input(type="text", value="Светлана")
+                            input(type="text", value="Иванова", required)
+                            input(type="text", value="Светлана", required)
 
                         div.contacts
-                            input(type="email", value="mail@mail.ru")
-                            input(type="tel", value="Контактный телефон")
+                            input(type="email", value="mail@mail.ru", required)
+                            input(type="tel", value="Контактный телефон", required)
 
                         span.title Изменение пароля
                         div.password
-                            input(type="password", placeholder="Новый пароль")
-                            input(type="password", placeholder="Повторите пароль")
+                            label.input: input(type="password", placeholder="Новый пароль", required)
+                            label.input: input(type="password", placeholder="Повторите пароль", required)
 
                         div.buttons
                             a.more Забыл пароль
