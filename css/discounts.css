@@ -104,17 +104,33 @@ section.main a.article i {
   line-height: 200%;
   color: rgba(255, 255, 255, 0.6);
 }
-section.main a.article img.background {
+section.main a.article div.background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
+  overflow: hidden;
+}
+section.main a.article div.background img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: left center;
      object-position: left center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+section.main a.article:hover div.background img {
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
 }
 section.main a.article.big {
   position: relative;
@@ -177,6 +193,9 @@ section.main a.article.small h3 {
 }
 section.main a.article.small span {
   color: #536452;
+}
+section.main a.article.small:hover h3 {
+  color: #4FAA4B;
 }
 section.main a.article.black {
   background: #e8f1d7;
