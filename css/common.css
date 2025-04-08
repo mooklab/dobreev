@@ -770,6 +770,9 @@ div.category {
   display: grid;
   -ms-flex-line-pack: start;
       align-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   justify-items: start;
   grid-gap: 49px;
   padding: 40px 21px;
@@ -807,6 +810,8 @@ div.category img.preview {
 }
 div.category div.title {
   display: grid;
+  -ms-flex-line-pack: start;
+      align-content: start;
   justify-items: start;
   grid-gap: 8px;
   min-height: 63px;
