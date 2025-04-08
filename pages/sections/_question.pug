@@ -3,7 +3,7 @@ section.question
 
         h2 Остались вопросы?
 
-        form(action="")
+        form
             input(type="text", placeholder="Имя") 
             input(type="text", placeholder="Фамилия") 
             input(type="email", placeholder="E-mail*", required) 
@@ -12,4 +12,4 @@ section.question
             +select('theme', 'Тема вопроса', 'Тема 1', 'Тема 2', 'Тема 3', 'Тема 4')
             div.merge
                 input(type="text", placeholder="Вопрос*", required)
-                button Отправить
+                button(type="submit") Отправить

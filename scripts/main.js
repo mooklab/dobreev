@@ -123,3 +123,29 @@ new Swiper(productGalleryMobile, {
         nextEl: productGalleryMobile?.querySelector('div.swiper-navigation > *:last-child'),
     },
 })
+
+const forms = document.querySelectorAll("form");
+
+forms.forEach(form => {
+
+    // Handle the submit event
+    form.addEventListener("submit", (event) => {
+        event.preventDefault(); // Prevent default submission
+        console.log("Form submitted successfully!");
+        // Add your custom logic here
+    });
+
+    // Handle invalid inputs
+    const inputs = form.querySelectorAll("input");
+    inputs.forEach((input) => {
+        input.addEventListener("invalid", (event) => {
+            event.target.style.border = "1px solid red"; // Highlight invalid input
+            console.log(`Invalid input: ${event.target.name}`);
+        });
+
+        // Reset border on valid input
+        input.addEventListener("input", () => {
+            input.style.border = ""; // Remove red border when corrected
+        });
+    });
+})

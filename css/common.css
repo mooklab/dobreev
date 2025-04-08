@@ -514,6 +514,30 @@ input[type=password]:hover,
 textarea:hover {
   border: 1px solid #4faa4b !important;
 }
+input[type=text]:focus::-webkit-input-placeholder, input[type=email]:focus::-webkit-input-placeholder, input[type=tel]:focus::-webkit-input-placeholder, input[type=password]:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+  font-weight: 400;
+  color: #313b30;
+}
+input[type=text]:focus::-moz-placeholder, input[type=email]:focus::-moz-placeholder, input[type=tel]:focus::-moz-placeholder, input[type=password]:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+  font-weight: 400;
+  color: #313b30;
+}
+input[type=text]:focus:-ms-input-placeholder, input[type=email]:focus:-ms-input-placeholder, input[type=tel]:focus:-ms-input-placeholder, input[type=password]:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
+  font-weight: 400;
+  color: #313b30;
+}
+input[type=text]:focus::-ms-input-placeholder, input[type=email]:focus::-ms-input-placeholder, input[type=tel]:focus::-ms-input-placeholder, input[type=password]:focus::-ms-input-placeholder, textarea:focus::-ms-input-placeholder {
+  font-weight: 400;
+  color: #313b30;
+}
+input[type=text]:focus::placeholder,
+input[type=email]:focus::placeholder,
+input[type=tel]:focus::placeholder,
+input[type=password]:focus::placeholder,
+textarea:focus::placeholder {
+  font-weight: 400;
+  color: #313b30;
+}
 input[type=text]::-webkit-search-cancel-button,
 input[type=email]::-webkit-search-cancel-button,
 input[type=tel]::-webkit-search-cancel-button,
@@ -1548,6 +1572,11 @@ footer div.scroll_top {
   width: 52px;
   height: 52px;
   background: #4faa4b;
+}
+@media (max-width: 960px) {
+  footer div.scroll_top {
+    display: none;
+  }
 }
 footer div.scroll_top:hover {
   background: #63BE5F;
