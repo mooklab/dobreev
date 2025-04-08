@@ -1997,13 +1997,19 @@ section.menu div.wrap {
 }
 section.menu div.categories {
   display: grid;
-  grid-gap: 24px;
+  grid-gap: 14px;
   background: white;
   padding: 40px 35px;
 }
 @media (max-width: 960px) {
   section.menu div.categories {
     padding: 26px var(--gap) 40px;
+    grid-gap: 14px;
+  }
+}
+@media (max-width: 960px) {
+  section.menu div.categories h2 {
+    font-size: 36px;
   }
 }
 section.menu div.categories div.list {
@@ -2035,6 +2041,11 @@ section.menu div.category {
 }
 section.menu div.category.opened {
   display: grid;
+}
+@media (max-width: 960px) {
+  section.menu div.category.opened {
+    display: none;
+  }
 }
 section.menu div.category div.accordion div.accordion_caption {
   display: grid;
@@ -2085,7 +2096,7 @@ section.menu div.category div.list {
 }
 section.menu div.category div.list div.column {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 14px;
 }
 section.menu div.category div.list div.column > a {
   margin-left: 28px;
