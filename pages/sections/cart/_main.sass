@@ -94,14 +94,19 @@ section.main
             &:last-child
                 padding-bottom: unset
                 border: unset
+                +screen(s)
+                    border-top: 1px solid #f2f5ef
 
             div.favourite
+                align-items: center
                 cursor: pointer
                 position: absolute
-                top: 10px
+                top: 0px
                 right: 24px
                 transition: all 0.3s
                 z-index: 2
+                +screen(s)
+                    top: 22px
                 &.added
                     svg
                         fill: #4FAA4B
@@ -109,10 +114,12 @@ section.main
             div.trash
                 cursor: pointer
                 position: absolute
-                top: 10px
+                top: 0px
                 right: 0px
                 transition: all 0.3s
                 z-index: 2
+                +screen(s)
+                    top: 22px
                 &:hover
                     svg
                         path
@@ -153,7 +160,7 @@ section.main
                 object-fit: contain
                 object-position: center center
                 margin-right: 20px
-                +screen(m)
+                +screen(s)
                     position: absolute
                     top: 20px
                     left: 22px
@@ -169,7 +176,7 @@ section.main
                 margin-right: 20px
                 +screen(s)
                     order: 1
-                    margin-right: 50px
+                    margin-right: unset
                 div.tags
                     display: flex
                     flex-wrap: wrap
@@ -317,10 +324,8 @@ section.main
             border: 1px solid #ececec
             border-radius: 4px
             width: 100%
-            height: 277px
             max-width: 1311px
             display: grid
-            align-items: start
             grid-template-columns: 3fr 6fr
             margin-bottom: 13px
             +screen(s)
@@ -367,6 +372,8 @@ section.main
                     font-size: 14px
                     line-height: 157%
                     color: #313b30
+                    &:hover
+                        color: #4FAA4B
 
                 a.button
                     margin-top: 19px
@@ -375,7 +382,7 @@ section.main
 
             img
                 width: 100%
-                height: 100%
+                height: 278px
                 object-fit: cover
                 object-position: center center
                 +screen(s)
@@ -469,6 +476,7 @@ section.main
             min-height: 150px
             padding-left: 189px
             box-sizing: border-box
+            border-radius: 4px
             img
                 position: absolute
                 top: 29px
@@ -547,7 +555,8 @@ section.main
         border: 1px solid #ececec
         border-radius: 4px
         padding: 26px 23px
-        margin-top: 40px
+        +screen(m)
+            margin-top: 40px
 
         div.delivery
             display: grid

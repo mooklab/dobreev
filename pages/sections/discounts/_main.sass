@@ -26,6 +26,7 @@ section.main
         grid-gap: 24px
         align-content: end
         min-height: 600px
+
         +screen(m)
             min-height: 400px
             grid-gap: 8px
@@ -70,6 +71,8 @@ section.main
             font-weight: 300
             font-size: 14px
             line-height: 157%
+            +screen(m)
+                max-width: 307px !important
 
         i
             font-weight: 300
@@ -99,11 +102,15 @@ section.main
         h2
             color: #fff
 
+        span
+            max-width: 430px
+
     a.article.medium
         position: relative
         color: white
         padding: 40px
         color: white
+        border-radius: 4px
         +screen(m)
             padding: 24px 16px
 
@@ -117,6 +124,7 @@ section.main
             height: 437px
             object-fit: cover
             object-position: center center
+            margin-bottom: unset
             +screen(m)
                 height: 400px
         h3

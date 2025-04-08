@@ -34,6 +34,7 @@ section.main div.content img {
      object-fit: cover;
   -o-object-position: center center;
      object-position: center center;
+  border-radius: 4px;
 }
 @media (max-width: 960px) {
   section.main div.content img {
@@ -41,10 +42,16 @@ section.main div.content img {
   }
 }
 section.main div.content h2 {
+  font-weight: 300;
+  font-size: 46px;
+  line-height: 109%;
+  color: #313b30;
   margin-bottom: 26px;
 }
 @media (max-width: 960px) {
   section.main div.content h2 {
+    font-size: 36px;
+    line-height: 111%;
     margin-bottom: 20px;
   }
 }/*# sourceMappingURL=discount.css.map */

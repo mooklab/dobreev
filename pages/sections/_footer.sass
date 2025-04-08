@@ -21,8 +21,6 @@ footer
                 +screen(m)
                     width: 141px
 
-            
-
         menu
             display: grid
             grid-auto-flow: column
@@ -45,6 +43,10 @@ footer
                 font-size: 13px
                 color: #313b30
                 white-space: nowrap
+                &:hover
+                    text-decoration: underline
+                    text-decoration-color: #4FAA4B
+                    text-underline-offset: 3px
 
         div.phone
             display: grid
@@ -66,6 +68,8 @@ footer
                     font-size: 16px
                     color: #313b30
                     line-height: 1em
+                    &:hover
+                        color: #4FAA4B
                 span
                     font-size: 12px
                     color: #313b30
@@ -141,3 +145,25 @@ footer
                 grid-gap: 12px
                 font-size: 12px
                 color: #313b30
+                &:hover
+                    color: #4FAA4B
+
+    div.scroll_top
+        cursor: pointer
+        grid-column: full
+        display: grid
+        align-items: center
+        justify-items: center
+        position: absolute
+        bottom: calc(100% + 40px)
+        right: 0
+        border-radius: 4px 0 0 4px
+        width: 52px
+        height: 52px
+        background: #4faa4b
+
+        &:hover
+            background: #63BE5F
+
+        &:active
+            background: #3B9637

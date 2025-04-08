@@ -99,6 +99,12 @@ section.main div.filter div.checkboxes.colors span:after {
   width: 10px;
   height: 8px;
 }
+section.main div.filter div.checkboxes.colors span:has(div.white)::after {
+  background-image: url(../images/color_tick_black.svg);
+}
+section.main div.filter div.checkboxes label.checkbox:nth-child(n+7) {
+  display: none;
+}
 section.main div.filter fieldset.search {
   position: relative;
   margin-bottom: 14px;
@@ -106,6 +112,12 @@ section.main div.filter fieldset.search {
 section.main div.filter fieldset.search input {
   background: transparent;
   border: 1px solid #e9ebe6;
+  padding: 9px;
+  font-weight: 300;
+  font-size: 13px;
+  color: #536452;
+  width: 100%;
+  border-radius: 4px;
 }
 section.main div.filter fieldset.search svg {
   position: absolute;
@@ -143,6 +155,23 @@ section.main div.filter.show {
   height: 100%;
   z-index: 10;
 }
+section.main div.filter div.block a.more {
+  margin-top: 14px;
+  display: block;
+}
+section.main div.filter div.block a.less {
+  margin-top: 14px;
+  display: none;
+}
+section.main div.filter div.block.opened label.checkbox:nth-child(n+7) {
+  display: grid;
+}
+section.main div.filter div.block.opened a.more {
+  display: none;
+}
+section.main div.filter div.block.opened a.less {
+  display: block;
+}
 section.main div.grid div.title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -154,6 +183,13 @@ section.main div.grid div.title {
       flex-wrap: wrap;
   gap: 27px;
   margin-bottom: 12px;
+}
+@media (max-width: 960px) {
+  section.main div.grid div.title {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 section.main div.grid div.title span {
   font-weight: 400;
@@ -219,6 +255,9 @@ section.main div.sort div.tags a {
   white-space: nowrap;
 }
 section.main div.sort div.tags a:hover {
+  background: #F3F5EF;
+}
+section.main div.sort div.tags a:active {
   background: #DCDED7;
 }
 section.main div.sort div.view {
@@ -387,6 +426,9 @@ section.main div.control div.pagination {
     display: none;
   }
 }
+section.main div.control div.pagination a:hover {
+  color: #4FAA4B;
+}
 section.main div.control div.pagination a.current {
   font-weight: 400;
   color: #4faa4b;
@@ -436,6 +478,11 @@ section.products div.title div.tags a {
   font-size: 12px;
   color: #536452;
 }
+@media (max-width: 960px) {
+  section.products div.title div.tags a {
+    color: #8D8D8D;
+  }
+}
 section.products div.title div.tags a:hover {
   border: 1px solid #F3F5EF;
   background: #F3F5EF;
@@ -473,6 +520,15 @@ section.products.hits {
 }
 section.products.hits a.product {
   border: unset;
+}
+section.products.recommended a.product {
+  padding: 40px;
+  padding-top: 24px;
+}
+@media (max-width: 960px) {
+  section.products.recommended a.product {
+    padding: 24px;
+  }
 }
 
 section.articles {
@@ -520,6 +576,15 @@ section.articles a.article {
     border: unset;
   }
 }
+section.articles a.article h3 {
+  font-size: 20px;
+  margin-left: 16px;
+}
+@media (max-width: 960px) {
+  section.articles a.article h3 {
+    margin-left: unset;
+  }
+}
 section.articles a.article img {
   width: 100%;
   height: 240px;
@@ -545,12 +610,14 @@ section.articles div.tags {
   display: flex;
   gap: 4px;
   margin-bottom: 8px;
+  margin-left: 16px;
 }
 @media (max-width: 960px) {
   section.articles div.tags {
     position: absolute;
     top: 10px;
     left: 10px;
+    margin-left: unset;
   }
 }
 section.articles div.tags span.tag {

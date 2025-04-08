@@ -39,6 +39,27 @@ section.main
 
     div.about
 
+        div.favourite
+            cursor: pointer
+            position: absolute
+            top: 0px
+            right: 24px
+            transition: all 0.3s
+            line-height: 0
+            z-index: 1
+            +screen(m)
+                display: none
+            &.added
+                opacity: 1 !important
+                svg
+                    fill: #4FAA4B
+            &:hover
+                svg
+                    fill: #4FAA4B
+            &:active
+                svg
+                    fill: #3B9637
+
         span.title
             display: block
             font-weight: 300
@@ -47,6 +68,7 @@ section.main
             color: #313b30
 
         div.description
+            position: relative
             display: grid
             font-weight: 300
             font-size: 16px
@@ -55,9 +77,14 @@ section.main
             padding-bottom: 24px
             margin-bottom: 24px
             border-bottom: 1px solid #e9ebe6
+            +screen(m)
+                border-bottom: unset
+                padding-bottom: unset
+                margin-bottom: 26px
 
             h1
                 margin-bottom: 46px
+                padding-right: 60px
                 +screen(m)
                     margin-bottom: 16px
 
@@ -82,6 +109,25 @@ section.main
                     height: 280px
                     object-fit: contain
                     object-position: center center
+
+                div.favourite
+                    display: grid
+                    top: 10px
+                    right: 10px
+
+                div.instock
+                    position: absolute
+                    top: 8px
+                    left: 8px
+                    font-weight: 300
+                    font-size: 12px
+                    line-height: 183%
+                    color: #fff
+                    border-radius: 4px
+                    height: 22px
+                    background: #e95d5d
+                    padding: 0 6px
+                    z-index: 1
 
             div.swiper-navigation
                 position: absolute
@@ -179,6 +225,26 @@ section.main
                     height: 24px
                     border-radius: 12px
 
+                div.colors
+                    display: flex
+                    gap: 8px
+                    span
+                        padding: unset
+                        margin: unset
+                        cursor: pointer
+                    span:before
+                        display: none
+                    span:after
+                        background-color: transparent
+                        background-image: url(../images/color_tick.svg)
+                        top: 8px
+                        left: 7px
+                        width: 10px
+                        height: 8px
+                    span:has(div.white)
+                        &::after
+                            background-image: url(../images/color_tick_black.svg)
+
             div.material
                 display: flex
                 gap: 3px
@@ -230,6 +296,21 @@ section.main
                     font-size: 14px
                     line-height: 157%
                     color: #536452
+                    margin-left: 14px
+                    +screen(m)
+                        display: grid
+                        align-items: end
+                        grid-template-columns: 1fr auto
+                        grid-gap: 8px
+                        margin-left: unset
+                        &::before
+                            content: ''
+                            display: block
+                            width: 100%
+                            height: 1px
+                            border-bottom: 1px dashed #e9ebe6
+                            margin-bottom: 5px
+                            margin-right: 8px
 
                 span:nth-child(n + 9)
                     display: none
@@ -271,6 +352,8 @@ section.main
 
             button
                 justify-self: end
+                +screen(s)
+                    width: 100%
 
     div.order
         display: grid
@@ -330,6 +413,31 @@ section.main
                     width: 44px
                     height: 44px
                     background: #fff
+
+                &.active
+                    display: none
+                    & + a.button
+                        display: grid
+
+            a.button
+                display: none
+                grid-template-columns: 1fr max-content
+                height: auto
+                padding-top: 5px
+                padding-bottom: 5px
+                padding-right: 6px
+                width: 100%
+                height: 54px
+                background: transparent
+                border: 1px solid #4FAA4B
+
+                span
+                    font-weight: 300
+                    font-size: 16px
+                    line-height: 162%
+                    color: rgba(79, 170, 75, 0.8)
+                    width: 100%
+                    text-align: center
 
         div.alert
             background: #e95d5d

@@ -30,6 +30,10 @@ section.main
         div.about
 
             div.description
+
+                div(onclick="event.preventDefault();this.classList.toggle('added')").favourite.desktop
+                    include ../../../images/favourite.svg
+
                 h1 Циркулярная пила Спец БЦП-1300, 1550 Вт, 185 мм
 
                 div.swiper.gallery
@@ -44,6 +48,9 @@ section.main
                             include ../../../images/swiper_arrow.svg
                         div.arrow
                             include ../../../images/swiper_arrow.svg
+                    div(onclick="event.preventDefault();this.classList.toggle('added')").favourite.mobile
+                        include ../../../images/favourite.svg
+                    div.instock В наличии 5 шт.
 
                 span.title О товаре
                 p Ищете смеситель, который не разбрызгивает воду в стороны? Поздравляем, вы его нашли – Lemark Linara LM0406C. Благодаря аэратору создается мягкий поток, что помогает контролировать расход. Керамический картридж диаметром 35 мм плавно смешивает горячую и холодную воду, позволяя регулировать ее до нужной температуры. Длина излива 149 мм подойдет для стандартных раковин.
@@ -61,8 +68,12 @@ section.main
             div.params
                 div.color
                     span Цвет
-                    div(style="background-color: #B5DFEB; ")
-                    div(style="background-color: #ffffff; border: 1px solid #EDEEEC;")
+                    //- div(style="background-color: #B5DFEB; ")
+                    //- div(style="background-color: #ffffff; border: 1px solid #EDEEEC;")
+                    +radios('colors',
+                        '<div class="color" style="background-color: #4FAA4B;"></div>', 
+                        '<div class="color white" style="background-color: #B5DFEB;"></div>',
+                        '<div class="color white" style="background-color: #FFFFFF; border: 1px solid #EDEEEC"></div>')
                 div.material
                     span Материал:
                     span Сталь
@@ -111,10 +122,12 @@ section.main
                 span.title Цена
                 span.old 47 100
                 span.current 34 800₽
-                button
+                button(onclick="this.classList.add('active')")
                     span В КОРЗИНУ
                     div.icon
                         img(src="images/cart_add.svg", alt="")
+                a(href="cart.html").button 
+                    span Перейти в корзину
 
             div.alert
                 img(src="images/alert.svg", alt="Осталось мало")

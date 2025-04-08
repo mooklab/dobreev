@@ -93,6 +93,11 @@ section.main a.article span {
   font-size: 14px;
   line-height: 157%;
 }
+@media (max-width: 960px) {
+  section.main a.article span {
+    max-width: 307px !important;
+  }
+}
 section.main a.article i {
   font-weight: 300;
   font-size: 11px;
@@ -126,11 +131,15 @@ section.main a.article.big {
 section.main a.article.big h2 {
   color: #fff;
 }
+section.main a.article.big span {
+  max-width: 430px;
+}
 section.main a.article.medium {
   position: relative;
   color: white;
   padding: 40px;
   color: white;
+  border-radius: 4px;
 }
 @media (max-width: 960px) {
   section.main a.article.medium {
@@ -151,6 +160,7 @@ section.main a.article.small img.preview {
      object-fit: cover;
   -o-object-position: center center;
      object-position: center center;
+  margin-bottom: unset;
 }
 @media (max-width: 960px) {
   section.main a.article.small img.preview {

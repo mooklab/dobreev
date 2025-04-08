@@ -20,6 +20,8 @@ section.contacts
 
         h3
             margin-bottom: 9px
+            +screen(m)
+                font-size: 20px
 
         span.address
             font-weight: 300
@@ -27,12 +29,16 @@ section.contacts
             line-height: 157%
             color: #adb3a7
             margin-bottom: 24px
+            +screen(m)
+                margin-bottom: 16px
 
         hr
             height: 1px
             width: 100%
             background: #eee
             margin-bottom: 19px
+            +screen(m)
+                margin-bottom: 16px
 
         a.phone
             display: grid
@@ -43,3 +49,5 @@ section.contacts
             font-size: 14px
             line-height: 157%
             color: #313b30
+            &:hover
+                color: #4FAA4B

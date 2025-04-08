@@ -24,3 +24,9 @@ section.main
                     +product('8','89370287', 'Миксер строительный сетевой Deko DKM1900, 1900 Вт', '5990', '16', 'Новинка')
                     +product('9','89363227', 'Нивелир лазерный Elitech ПЛ 4К штатив в комплекте, 15 м', '5415', '0', 'Хит продаж', 'Новинка')
                     +product('10','12829182', 'Ящик для инструмента Systec BEX19-3 240x230x500 мм, пластик, цвет чёрно-жёлтый', '1061', '0', 'Осталось мало')
+
+script.
+    favourites = document.querySelectorAll('div.list div.favourite')
+    favourites.forEach(favourite => {
+        favourite.classList.add('added')
+    })

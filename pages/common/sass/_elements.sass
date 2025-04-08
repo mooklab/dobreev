@@ -37,6 +37,8 @@ button, a.button
     height: 36px
     &:hover
         background: #63BE5F
+    &:active
+        background: #3B9637
 
 fieldset.select
     user-select: none
@@ -272,6 +274,12 @@ a.product
             opacity: 1 !important
             svg
                 fill: #4FAA4B
+        &:hover
+            svg
+                fill: #4FAA4B
+        &:active
+            svg
+                fill: #3B9637
 
     div.tags
         position: absolute
@@ -280,6 +288,9 @@ a.product
         display: grid
         grid-gap: 4px
         z-index: 2
+        +screen(m)
+            top: 8px
+            left: 8px
         span
             display: grid
             width: max-content
@@ -300,13 +311,16 @@ a.product
         padding-bottom: 23px
         margin-bottom: 17px
         overflow: hidden !important
+        +screen(s)
+            pointer-events: none
+
         div.navigation-thumbs
             position: absolute
             top: 0
             left: 0
             width: 100%
             height: 100%
-            display: flex
+            display: none
             gap: 5px
             z-index: 2
             +screen(s)
@@ -320,7 +334,7 @@ a.product
                 +screen(m)
                     display: none
                 &.active
-                    border-bottom: 2px solid #4faa4b
+                    border-bottom: 1px solid #4faa4b
 
         img.preview
             width: 100%
@@ -368,15 +382,32 @@ a.product
             width: 44px
             height: 44px
             +screen(m)
+                display: grid
+
+            img.add
+                display: block
+            img.remove
                 display: none
+
             &:hover
                 border: 1px solid #4FAA4B
+
+            &.added
+                display: grid
+                background: #4FAA4B
+                img.add
+                    display: none
+                img.remove
+                    display: block
 
     &:hover
         border: 1px solid #4FAA4B
 
         div.favourite
             opacity: 1
+        div.swiper
+            div.navigation-thumbs
+                display: flex
         div.order
             div.cart
                 display: grid
@@ -394,7 +425,9 @@ div.category
     +screen(m)
         grid-gap: 32px
         padding: 20px
+        padding-bottom: 25px
         padding-left: 89px
+        align-items: center
 
     img.preview
         position: absolute
@@ -412,6 +445,9 @@ div.category
         display: grid
         justify-items: start
         grid-gap: 8px
+        min-height: 63px
+        +screen(m)
+            min-height: unset
 
         span
             font-weight: 400
@@ -423,10 +459,10 @@ div.category
             font-size: 16px
             line-height: 125%
             color: #313b30
-            border-bottom: 1px solid transparent
             transition: all 0.3s
             &:hover
-                border-bottom: 1px solid #4FAA4B
+                text-decoration: underline #4FAA4B
+                text-underline-offset: 3px
 
     div.sublist
         display: grid
@@ -507,6 +543,12 @@ div.swiper-navigation
             svg
                 path
                     stroke: white
+        &:active
+            background: #3B9637
+            border: 1px solid #3B9637
+            svg
+                path
+                    stroke: white
 
         &:last-child
             transform: scaleX(-1)
@@ -518,14 +560,20 @@ div.swiper-navigation
     &:has(div.swiper-button-lock)
         display: none
 
-a.more
+a.more, a.less
     font-weight: 400
     font-size: 12px
     color: #536452
-    border-bottom: 1px solid #4FAA4B
+    text-decoration: underline
+    text-underline-offset: 3px
+    text-decoration-color: #4FAA4B
     transition: border-bottom 0.2s
     &:hover
-        border-bottom: 1px solid #fff
+        text-decoration-thickness: 2px
+        text-decoration-color: #63BE5F
+    &:active
+        text-decoration-thickness: 2px
+        text-decoration-color: #3B9637
 
 div.breadcrumbs
     display: grid
@@ -551,6 +599,8 @@ div.breadcrumbs
     a
         &:hover
             color: #4faa4b
+        &:active
+            color: #3B9637
 
     span.divide
         color: #4faa4b
@@ -644,6 +694,8 @@ div.range
             font-weight: 300
             font-size: 13px
             color: #536452
+            background: #f8faf7
+            padding: 10px 11px
 
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button
@@ -657,13 +709,20 @@ div.lk
     +screen(m)
         grid-template-columns: 1fr
 
+    & > h1
+        display: none
+        +screen(m)
+            display: block
+
     div.lkmenu
+        position: relative
         display: grid
         grid-gap: 6px
         padding: 40px 22px 40px 27px
         border: 1px solid #ececec
         border-radius: 4px
         +screen(m)
+            grid-template-columns: 1fr max-content
             padding: 11px 14px
             background: #f8faf7
             border: unset
@@ -682,6 +741,8 @@ div.lk
             font-size: 13px
             color: #313b30
             transition: all 0.2s
+            &:hover
+                color: #4FAA4B
             +screen(m)
                 display: none
                 padding: unset
@@ -702,6 +763,16 @@ div.lk
                 +screen(m)
                     display: block
                     padding: 14px 0
+            img
+                transform: rotate(180deg)
+
+        img
+            display: none
+            position: absolute
+            top: 15px
+            right: 11px
+            +screen(m)
+                display: block
 
     div.lkpage
         display: grid
@@ -715,6 +786,7 @@ a.article
         object-fit: cover
         object-position: center center
         margin-bottom: 15px
+        border-radius: 4px
         +screen(m)
             height: 240px
 
@@ -728,6 +800,8 @@ a.article
         font-size: 16px
         line-height: 137%
         color: #313b30
+        max-width: 353px
+        display: block
 
     &:hover
         span.title

@@ -1,4 +1,17 @@
 section.main
+
+    div.title
+        display: grid
+        grid-template-columns: 1fr max-content
+        grid-gap: 30px
+        +screen(m)
+            display: none
+        fieldset
+            min-width: 128px
+            div.select_current
+                span
+                    background: #f8faf7
+
     div.list
         display: grid
         grid-template-columns: repeat(5, 1fr)

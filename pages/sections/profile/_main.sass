@@ -1,5 +1,9 @@
 section.main
 
+    h2
+        +screen(m)
+            display: none
+
     label.upload
         cursor: pointer
         position: relative
@@ -21,9 +25,20 @@ section.main
             transform: translate(-50%, -50%)
 
     div.profile
+        position: relative
         display: grid
         grid-template-columns: 128px 1fr
         grid-gap: 20px
+        +screen(m)
+            grid-template-columns: 1fr
+
+        label.upload
+            +screen(m)
+                position: absolute
+                top: 10px
+                left: 0
+                width: 80px
+                height: 80px
 
         span.name
             display: block
@@ -33,6 +48,9 @@ section.main
             color: #313b30
             margin-top: 53px
             margin-bottom: 53px
+            +screen(m)
+                margin-left: 96px
+                margin-top: 39px
 
         span.title
             display: block
@@ -64,3 +82,6 @@ section.main
             grid-template-columns: repeat(2, max-content)
             grid-gap: 24px
             margin-top: 10px
+
+        a.more
+            font-size: 13px

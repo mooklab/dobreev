@@ -3,6 +3,7 @@ header
     div.top
         grid-column: full
         display: grid
+        align-items: end
         justify-items: center
         background: #f2f5ef
         +screen(m)
@@ -14,7 +15,7 @@ header
             grid-template-columns: 1fr max-content 1fr
             grid-gap: var(--gap)
             padding: 12px var(--gap)
-            max-width: calc( var(--content-width) + var(--gap) )
+            max-width: calc( var(--content-width) + var(--gap) * 2 )
             width: 100%
             +screen(m)
                 padding: 10px var(--gap)
@@ -38,14 +39,22 @@ header
             font-size: 10px
             line-height: 120%
             color: #000
+            img
+                +screen(s)
+                    height: 18px
+                    width: 15px
             span
                 width: max-content
                 border-bottom: 1px dashed #5AB356
                 +screen(m)
                     display: none
+            &:hover
+                span
+                    border-bottom: unset
 
         menu
             display: grid
+            align-items: end
             grid-auto-flow: column
             grid-auto-columns: max-content
             grid-gap: 40px
@@ -55,6 +64,9 @@ header
                 font-weight: 300
                 font-size: 10px
                 color: #536452
+                padding-bottom: 3px
+                &:hover
+                    color: #4FAA4B
 
         div.phone
             justify-self: end
@@ -66,6 +78,8 @@ header
 
             a
                 color: #536452
+                &:hover
+                    color: #4FAA4B
                 +screen(m)
                     display: none
 
@@ -74,6 +88,11 @@ header
                 color: #536452
                 +screen(m)
                     display: none
+
+            img
+                +screen(m)
+                    width: 18px
+                    height: 18px
 
     div.middle
         display: grid
@@ -146,6 +165,8 @@ header
                     color: #313b30
                     height: 40px
                     background: white
+                    &::-webkit-search-cancel-button
+                        display: none
                     +screen(s)
                         border-radius: 4px
                         border: 1px solid #e9ebe6
@@ -205,7 +226,7 @@ header
 
         div.control
             display: grid
-            align-items: center
+            align-items: end
             grid-auto-flow: column
             grid-auto-columns: max-content
             grid-gap: 40px
@@ -214,13 +235,15 @@ header
             +screen(m)
                 display: none
 
-            & > *
+            a
                 display: grid
                 justify-items: center
                 grid-gap: 5px
 
                 div.icon
                     position: relative
+                    img.fill
+                        display: none
 
                 div.count
                     display: grid
@@ -239,6 +262,13 @@ header
                     line-height: 1em
                     color: #ac8400
                     white-space: nowrap
+
+                &:hover
+                    div.icon
+                        img
+                            display: none
+                        img.fill
+                            display: inline
 
     div.bottom
         grid-column: full
@@ -273,6 +303,9 @@ header
                 font-size: 13px
                 color: white
                 padding: 12px 0
+                &:hover
+                    text-decoration: underline
+                    text-underline-offset: 3px
 
     &.menu + section.menu
         grid-template-rows: 1fr

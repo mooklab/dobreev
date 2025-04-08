@@ -28,7 +28,9 @@ section.main
                             include ../../../images/search.svg
                             input(type="search", name="", placeholder="Найти", oninput="console.log(this.value)")
                         +checkboxes('material', 'Axor <pre>23</pre>', 'Duravit <pre>23</pre>', 'Galassia <pre>113</pre>', 'GSI <pre>11</pre>', 'Globo', 'Grohe', 'Axor', 'Duravit', 'Galassia', 'GSI', 'Globo', 'Grohe')
-                    
+                        
+                        a(onclick="this.parentNode.classList.add('opened')").more еще 23
+                        a(onclick="this.parentNode.classList.remove('opened')").less скрыть
                     hr
             
                     div.block
@@ -45,8 +47,8 @@ section.main
                         h3 Цвет
                         +checkboxes('colors',
                             '<div class="color" style="background-color: #4FAA4B;"></div>', 
-                            '<div class="color" style="background-color: #B5DFEB;"></div>',
-                            '<div class="color" style="background-color: #FFFFFF; border: 1px solid #EDEEEC"></div>')
+                            '<div class="color white" style="background-color: #B5DFEB;"></div>',
+                            '<div class="color white" style="background-color: #FFFFFF; border: 1px solid #EDEEEC"></div>')
                 div(onclick="this.closest('div.filter').classList.remove('show')").background
 
             div.grid

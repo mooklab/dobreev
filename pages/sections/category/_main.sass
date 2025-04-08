@@ -66,6 +66,7 @@ section.main
         div.checkboxes
             display: grid
             grid-gap: 14px
+
             &.colors
                 display: flex
                 gap: 8px
@@ -81,6 +82,12 @@ section.main
                     left: 7px
                     width: 10px
                     height: 8px
+                span:has(div.white)
+                    &::after
+                        background-image: url(../images/color_tick_black.svg)
+
+            label.checkbox:nth-child(n + 7)
+                display: none
 
         fieldset.search
             position: relative
@@ -89,6 +96,12 @@ section.main
             input
                 background: transparent
                 border: 1px solid #e9ebe6
+                padding: 9px
+                font-weight: 300
+                font-size: 13px
+                color: #536452
+                width: 100%
+                border-radius: 4px
 
             svg
                 position: absolute
@@ -120,6 +133,23 @@ section.main
             height: 100%
             z-index: 10
 
+        div.block
+            a.more
+                margin-top: 14px
+                display: block
+
+            a.less
+                margin-top: 14px
+                display: none
+
+            &.opened
+                label.checkbox:nth-child(n + 7)
+                    display: grid
+                a.more
+                    display: none
+                a.less
+                    display: block
+
     div.grid
         div.title
             display: flex
@@ -127,6 +157,8 @@ section.main
             flex-wrap: wrap
             gap: 27px
             margin-bottom: 12px
+            +screen(m)
+                justify-content: space-between
             span
                 font-weight: 400
                 font-size: 12px
@@ -173,6 +205,8 @@ section.main
                 padding: 4.5px 15px
                 white-space: nowrap
                 &:hover
+                    background: #F3F5EF
+                &:active
                     background: #DCDED7
 
         div.view
@@ -295,6 +329,9 @@ section.main
             color: rgba(49, 59, 48, 0.8)
             +screen(m)
                 display: none
+
+            a:hover
+                color: #4FAA4B
 
             a.current
                 font-weight: 400

@@ -1,3 +1,8 @@
+@media (max-width: 960px) {
+  section.main div.lkpage > h2 {
+    display: none;
+  }
+}
 section.main div.list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -61,6 +66,11 @@ section.products div.title div.tags a {
   font-size: 12px;
   color: #536452;
 }
+@media (max-width: 960px) {
+  section.products div.title div.tags a {
+    color: #8D8D8D;
+  }
+}
 section.products div.title div.tags a:hover {
   border: 1px solid #F3F5EF;
   background: #F3F5EF;
@@ -98,4 +108,13 @@ section.products.hits {
 }
 section.products.hits a.product {
   border: unset;
+}
+section.products.recommended a.product {
+  padding: 40px;
+  padding-top: 24px;
+}
+@media (max-width: 960px) {
+  section.products.recommended a.product {
+    padding: 24px;
+  }
 }/*# sourceMappingURL=favourite.css.map */

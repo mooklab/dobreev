@@ -83,6 +83,11 @@ section.error div.buttons a.button.border {
   border: 1px solid #adb3a7;
   color: #536452;
 }
+section.error div.buttons a.button.border:hover {
+  border: 1px solid #63BE5F;
+  background: #63BE5F;
+  color: white;
+}
 
 section.question {
   margin-top: var(--section-gap);

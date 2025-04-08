@@ -9,7 +9,12 @@ section.main {
 }
 section.main div.container {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 14px;
+}
+@media (max-width: 960px) {
+  section.main div.container {
+    grid-gap: 20px;
+  }
 }
 section.main div.categories {
   display: grid;
@@ -35,7 +40,7 @@ section.main div.categories {
     width: 0;
   }
 }
-section.main div.categories div.category {
+section.main div.categories a.category_item {
   display: grid;
   grid-template-columns: repeat(2, -webkit-max-content);
   grid-template-columns: repeat(2, max-content);
@@ -43,6 +48,8 @@ section.main div.categories div.category {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -54,6 +61,12 @@ section.main div.categories div.category {
   color: #313b30;
   text-transform: uppercase;
   padding: 10px 25px;
+}
+section.main div.categories a.category_item:hover {
+  background: #FFF446;
+}
+section.main div.categories a.category_item:active {
+  background: #FFE032;
 }
 section.main div.banners {
   display: grid;
@@ -123,7 +136,7 @@ section.main div.banners div.banner:nth-child(1) h1 {
   section.main div.banners div.banner:nth-child(1) h1 {
     font-weight: 400;
     font-size: 20px;
-    line-height: unset;
+    line-height: 1.2em;
     margin-bottom: 4px;
   }
 }
@@ -175,6 +188,8 @@ section.main div.banners div.banner:nth-child(2) h1 {
   section.main div.banners div.banner:nth-child(2) h1 {
     font-weight: 400;
     font-size: 20px;
+    line-height: 1.2em;
+    margin-bottom: 12px;
   }
 }
 section.main div.banners div.banner:nth-child(2) ul {
@@ -256,6 +271,11 @@ section.products div.title div.tags a {
   font-size: 12px;
   color: #536452;
 }
+@media (max-width: 960px) {
+  section.products div.title div.tags a {
+    color: #8D8D8D;
+  }
+}
 section.products div.title div.tags a:hover {
   border: 1px solid #F3F5EF;
   background: #F3F5EF;
@@ -294,6 +314,15 @@ section.products.hits {
 section.products.hits a.product {
   border: unset;
 }
+section.products.recommended a.product {
+  padding: 40px;
+  padding-top: 24px;
+}
+@media (max-width: 960px) {
+  section.products.recommended a.product {
+    padding: 24px;
+  }
+}
 
 section.brands {
   margin-top: var(--section-gap);
@@ -324,7 +353,7 @@ section.brands div.list {
 }
 @media (max-width: 960px) {
   section.brands div.list {
-    padding: 36px 16px;
+    padding: 36px 24px;
   }
 }
 
@@ -373,6 +402,15 @@ section.articles a.article {
     border: unset;
   }
 }
+section.articles a.article h3 {
+  font-size: 20px;
+  margin-left: 16px;
+}
+@media (max-width: 960px) {
+  section.articles a.article h3 {
+    margin-left: unset;
+  }
+}
 section.articles a.article img {
   width: 100%;
   height: 240px;
@@ -398,12 +436,14 @@ section.articles div.tags {
   display: flex;
   gap: 4px;
   margin-bottom: 8px;
+  margin-left: 16px;
 }
 @media (max-width: 960px) {
   section.articles div.tags {
     position: absolute;
     top: 10px;
     left: 10px;
+    margin-left: unset;
   }
 }
 section.articles div.tags span.tag {
@@ -591,6 +631,8 @@ section.news a.headline span.date {
 }
 section.news a.headline h3 {
   margin-bottom: 9px;
+  font-size: 16px;
+  font-weight: 300;
 }
 @media (max-width: 960px) {
   section.news a.headline h3 {
@@ -632,7 +674,6 @@ section.banners div.find, section.banners div.subscribe {
       -ms-flex-align: center;
           align-items: center;
   grid-template-columns: repeat(2, 1fr);
-  padding: 45px;
   border-radius: 4px;
 }
 @media (max-width: 640px) {
@@ -659,6 +700,7 @@ section.banners div.find img, section.banners div.subscribe img {
 }
 section.banners div.find div.text, section.banners div.subscribe div.text {
   display: grid;
+  padding: 45px 45px 45px;
 }
 @media (max-width: 640px) {
   section.banners div.find div.text, section.banners div.subscribe div.text {

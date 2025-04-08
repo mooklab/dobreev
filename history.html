@@ -50,11 +50,11 @@
                     </fieldset>
                 </div>
                 <div class="control"><a class="sign" href="profile.html">
-                        <div class="icon"><img src="images/sign.svg" alt=""></div><span>Войти</span></a><a class="sign" href="favourite.html">
-                        <div class="icon"><img src="images/favourite.svg" alt="">
+                        <div class="icon"><img src="images/sign.svg" alt=""><img class="fill" src="images/sign_fill.svg" alt=""></div><span>Войти</span></a><a class="sign" href="favourite.html">
+                        <div class="icon"><img src="images/favourite.svg" alt=""><img class="fill" src="images/favourite_fill.svg" alt="">
                             <div class="count">2</div>
                         </div><span>Избранное</span></a><a class="sign" href="cart.html">
-                        <div class="icon"><img src="images/cart.svg" alt="">
+                        <div class="icon"><img src="images/cart.svg" alt=""><img class="fill" src="images/cart_fill.svg" alt="">
                             <div class="count">10+</div>
                         </div><span>Корзина</span></a></div>
             </div>
@@ -1424,13 +1424,35 @@
                 <div class="container">
                     <div class="breadcrumbs"><a href="index.html">Главная</a><span class="divide">»</span><span class="current">История заказов</span></div>
                     <div class="lk">
+                        <h1>Личный кабинет</h1>
                         <div class="lkmenu" onclick="this.classList.toggle('opened')"><span class="title">Личный кабинет</span>
                             <ul>
                                 <li> <a href="profile.html">Мой профиль</a><a class="active" href="history.html">История заказов</a><a href="favourite.html">Избранное</a><a href="profile.html">Просмотренные товары</a></li>
-                            </ul>
+                            </ul><img src="/images/select_arrow.svg" alt=""/>
                         </div>
                         <div class="lkpage">
-                            <h2>История заказов</h2>
+                            <div class="title">
+                                <h2>История заказов</h2>
+                                <fieldset class="select time">
+                                    <div class="select_current" tabindex="0">
+                                        <input type="radio" id="time" value="За день" name="time" checked="checked"/><span>За день</span>
+                                        <input type="radio" id="time_0" value="За неделю" name="time"/><span>За неделю</span>
+                                        <input type="radio" id="time_1" value="За месяц" name="time"/><span>За месяц</span>
+                                        <input type="radio" id="time_2" value="За год" name="time"/><span>За год</span>
+                                        <div class="arrow"><svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 0.75L6.5 6.75L12 0.749999" stroke="#4FAA4B"/>
+</svg>
+
+                                        </div>
+                                    </div>
+                                    <div class="select_list">
+                                        <label for="time">За день</label>
+                                        <label for="time_0">За неделю</label>
+                                        <label for="time_1">За месяц</label>
+                                        <label for="time_2">За год</label>
+                                    </div>
+                                </fieldset>
+                            </div>
                             <div class="list"><a class="product" href="product.html">
                                     <div class="favourite" onclick="event.preventDefault();this.classList.toggle('added')"><svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1_2405)">
@@ -1457,7 +1479,7 @@
                                     <div class="order">
                                         <div class="price"><span class="current">4 825 ₽</span>
                                         </div>
-                                        <div class="cart"><img src="images/cart_add.svg" alt="В корзину"/></div>
+                                        <div class="cart" onclick="event.preventDefault(); this.classList.toggle('added')"><img class="add" src="images/cart_add.svg" alt="В корзину"/><img class="remove" src="images/cart_remove.svg" alt="В корзину"/></div>
                                     </div></a><a class="product" href="product.html">
                                     <div class="favourite" onclick="event.preventDefault();this.classList.toggle('added')"><svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1_2405)">
@@ -1484,7 +1506,7 @@
                                     <div class="order">
                                         <div class="price"><span class="current">1 990 ₽</span>
                                         </div>
-                                        <div class="cart"><img src="images/cart_add.svg" alt="В корзину"/></div>
+                                        <div class="cart" onclick="event.preventDefault(); this.classList.toggle('added')"><img class="add" src="images/cart_add.svg" alt="В корзину"/><img class="remove" src="images/cart_remove.svg" alt="В корзину"/></div>
                                     </div></a>
                             </div>
                         </div>
@@ -1536,7 +1558,7 @@
                                     <div class="order">
                                         <div class="price"><span class="current">4 825 ₽</span>
                                         </div>
-                                        <div class="cart"><img src="images/cart_add.svg" alt="В корзину"/></div>
+                                        <div class="cart" onclick="event.preventDefault(); this.classList.toggle('added')"><img class="add" src="images/cart_add.svg" alt="В корзину"/><img class="remove" src="images/cart_remove.svg" alt="В корзину"/></div>
                                     </div></a>
                             </div>
                             <div class="swiper-slide"><a class="product" href="product.html">
@@ -1565,7 +1587,7 @@
                                     <div class="order">
                                         <div class="price"><span class="current">1 990 ₽</span>
                                         </div>
-                                        <div class="cart"><img src="images/cart_add.svg" alt="В корзину"/></div>
+                                        <div class="cart" onclick="event.preventDefault(); this.classList.toggle('added')"><img class="add" src="images/cart_add.svg" alt="В корзину"/><img class="remove" src="images/cart_remove.svg" alt="В корзину"/></div>
                                     </div></a>
                             </div>
                             <div class="swiper-slide"><a class="product" href="product.html">
@@ -1594,7 +1616,7 @@
                                     <div class="order">
                                         <div class="price"><span class="old">3 909</span><span class="current">3 490 ₽</span>
                                         </div>
-                                        <div class="cart"><img src="images/cart_add.svg" alt="В корзину"/></div>
+                                        <div class="cart" onclick="event.preventDefault(); this.classList.toggle('added')"><img class="add" src="images/cart_add.svg" alt="В корзину"/><img class="remove" src="images/cart_remove.svg" alt="В корзину"/></div>
                                     </div></a>
                             </div>
                             <div class="swiper-slide"><a class="product" href="product.html">
@@ -1621,7 +1643,7 @@
                                     <div class="order">
                                         <div class="price"><span class="current">14 000 ₽</span>
                                         </div>
-                                        <div class="cart"><img src="images/cart_add.svg" alt="В корзину"/></div>
+                                        <div class="cart" onclick="event.preventDefault(); this.classList.toggle('added')"><img class="add" src="images/cart_add.svg" alt="В корзину"/><img class="remove" src="images/cart_remove.svg" alt="В корзину"/></div>
                                     </div></a>
                             </div>
                             <div class="swiper-slide"><a class="product" href="product.html">
@@ -1650,7 +1672,7 @@
                                     <div class="order">
                                         <div class="price"><span class="current">19 890 ₽</span>
                                         </div>
-                                        <div class="cart"><img src="images/cart_add.svg" alt="В корзину"/></div>
+                                        <div class="cart" onclick="event.preventDefault(); this.classList.toggle('added')"><img class="add" src="images/cart_add.svg" alt="В корзину"/><img class="remove" src="images/cart_remove.svg" alt="В корзину"/></div>
                                     </div></a>
                             </div>
                             <div class="swiper-slide"><a class="product" href="product.html">
@@ -1677,7 +1699,7 @@
                                     <div class="order">
                                         <div class="price"><span class="current">6 990 ₽</span>
                                         </div>
-                                        <div class="cart"><img src="images/cart_add.svg" alt="В корзину"/></div>
+                                        <div class="cart" onclick="event.preventDefault(); this.classList.toggle('added')"><img class="add" src="images/cart_add.svg" alt="В корзину"/><img class="remove" src="images/cart_remove.svg" alt="В корзину"/></div>
                                     </div></a>
                             </div>
                             <div class="swiper-slide"><a class="product" href="product.html">
@@ -1706,7 +1728,7 @@
                                     <div class="order">
                                         <div class="price"><span class="current">7 884 ₽</span>
                                         </div>
-                                        <div class="cart"><img src="images/cart_add.svg" alt="В корзину"/></div>
+                                        <div class="cart" onclick="event.preventDefault(); this.classList.toggle('added')"><img class="add" src="images/cart_add.svg" alt="В корзину"/><img class="remove" src="images/cart_remove.svg" alt="В корзину"/></div>
                                     </div></a>
                             </div>
                             <div class="swiper-slide"><a class="product" href="product.html">
@@ -1735,7 +1757,7 @@
                                     <div class="order">
                                         <div class="price"><span class="old">6 948</span><span class="current">5 990 ₽</span>
                                         </div>
-                                        <div class="cart"><img src="images/cart_add.svg" alt="В корзину"/></div>
+                                        <div class="cart" onclick="event.preventDefault(); this.classList.toggle('added')"><img class="add" src="images/cart_add.svg" alt="В корзину"/><img class="remove" src="images/cart_remove.svg" alt="В корзину"/></div>
                                     </div></a>
                             </div>
                             <div class="swiper-slide"><a class="product" href="product.html">
@@ -1764,7 +1786,7 @@
                                     <div class="order">
                                         <div class="price"><span class="current">5 415 ₽</span>
                                         </div>
-                                        <div class="cart"><img src="images/cart_add.svg" alt="В корзину"/></div>
+                                        <div class="cart" onclick="event.preventDefault(); this.classList.toggle('added')"><img class="add" src="images/cart_add.svg" alt="В корзину"/><img class="remove" src="images/cart_remove.svg" alt="В корзину"/></div>
                                     </div></a>
                             </div>
                             <div class="swiper-slide"><a class="product" href="product.html">
@@ -1793,7 +1815,7 @@
                                     <div class="order">
                                         <div class="price"><span class="current">1 061 ₽</span>
                                         </div>
-                                        <div class="cart"><img src="images/cart_add.svg" alt="В корзину"/></div>
+                                        <div class="cart" onclick="event.preventDefault(); this.classList.toggle('added')"><img class="add" src="images/cart_add.svg" alt="В корзину"/><img class="remove" src="images/cart_remove.svg" alt="В корзину"/></div>
                                     </div></a>
                             </div>
                         </div>
@@ -1815,6 +1837,7 @@
                     </div>
                 </div>
             </div>
+            <div class="scroll_top" onclick="window.scrollTo(0, 0)"><img src="images/top_arrow.svg" alt=""></div>
         </footer>
     </body>
 </html>

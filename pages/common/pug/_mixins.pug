@@ -26,10 +26,11 @@ mixin product(image, article, title, price, discount, ...tags)
                 - if( discount > 0 )
                     span.old !{ new Intl.NumberFormat('ru-RU').format(Math.round(parseInt(price) + (price / 100 * discount))) }
                 span.current !{ new Intl.NumberFormat('ru-RU').format(price) } ₽
-            div.cart
-                img(src="images/cart_add.svg", alt="В корзину")
+            div(onclick="event.preventDefault(); this.classList.toggle('added')").cart
+                img(src="images/cart_add.svg", alt="В корзину").add
+                img(src="images/cart_remove.svg", alt="В корзину").remove
             
-mixin article(image, title)
+mixin article_card(image, title)
     a(href="article.html").article
         img(src=image, alt=title)
         div.tags
@@ -101,6 +102,7 @@ mixin range(name, min, max)
         block
 
 mixin lkmenu(link)
+    h1 Личный кабинет
     div(onclick="this.classList.toggle('opened')").lkmenu
         span.title Личный кабинет
         ul
@@ -109,6 +111,7 @@ mixin lkmenu(link)
                 a(href="history.html", class=link=='history' && 'active') История заказов
                 a(href="favourite.html", class=link=='favourite' && 'active') Избранное
                 a(href="profile.html") Просмотренные товары
+        img(src="/images/select_arrow.svg", alt="")
 
 mixin article(image, date, title)
     a(href="article.html").article

@@ -24,6 +24,11 @@ section.map div#map {
   width: 100%;
   height: 600px;
 }
+@media (max-width: 960px) {
+  section.map div#map {
+    height: 280px;
+  }
+}
 
 section.contacts {
   margin-top: 40px;
@@ -59,6 +64,11 @@ section.contacts div.contact {
 section.contacts div.contact h3 {
   margin-bottom: 9px;
 }
+@media (max-width: 960px) {
+  section.contacts div.contact h3 {
+    font-size: 20px;
+  }
+}
 section.contacts div.contact span.address {
   font-weight: 300;
   font-size: 14px;
@@ -66,11 +76,21 @@ section.contacts div.contact span.address {
   color: #adb3a7;
   margin-bottom: 24px;
 }
+@media (max-width: 960px) {
+  section.contacts div.contact span.address {
+    margin-bottom: 16px;
+  }
+}
 section.contacts div.contact hr {
   height: 1px;
   width: 100%;
   background: #eee;
   margin-bottom: 19px;
+}
+@media (max-width: 960px) {
+  section.contacts div.contact hr {
+    margin-bottom: 16px;
+  }
 }
 section.contacts div.contact a.phone {
   display: grid;
@@ -84,6 +104,9 @@ section.contacts div.contact a.phone {
   font-size: 14px;
   line-height: 157%;
   color: #313b30;
+}
+section.contacts div.contact a.phone:hover {
+  color: #4FAA4B;
 }
 
 section.question {

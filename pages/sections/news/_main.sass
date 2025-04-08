@@ -45,8 +45,14 @@ section.main
                 padding: unset
 
             h1
+                font-weight: 300
+                font-size: 46px
+                line-height: 109%
+                color: #313b30
                 margin-bottom: 30px
                 +screen(m)
+                    font-size: 36px
+                    line-height: 111%
                     margin-bottom: 16px
 
             span
@@ -65,7 +71,7 @@ section.main
         justify-items: center
         margin-top: 40px
         +screen(m)
-            margin-top: 24px
+            margin-top: 32px
 
         div.pagination
             position: absolute
@@ -80,6 +86,9 @@ section.main
             color: rgba(49, 59, 48, 0.8)
             +screen(m)
                 display: none
+
+            a:hover
+                color: #4FAA4B
 
             a.current
                 font-weight: 400
