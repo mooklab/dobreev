@@ -140,12 +140,14 @@ forms.forEach(form => {
     inputs.forEach((input) => {
         input.addEventListener("invalid", (event) => {
             event.target.style.border = "1px solid red"; // Highlight invalid input
+            event.target.parentNode.classList.add('error')
             console.log(`Invalid input: ${event.target.name}`);
         });
 
         // Reset border on valid input
         input.addEventListener("input", () => {
             input.style.border = ""; // Remove red border when corrected
+            input.parentNode.classList.add('error')
         });
     });
 })

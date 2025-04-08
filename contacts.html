@@ -1526,10 +1526,18 @@
                 <div class="container">
                     <h2>Остались вопросы?</h2>
                     <form>
-                        <input type="text" placeholder="Имя">
-                        <input type="text" placeholder="Фамилия">
-                        <input type="email" placeholder="E-mail*" required>
-                        <input type="tel" placeholder="Контактный телефон">
+                        <label class="input">
+                            <input type="text" placeholder="Имя">
+                        </label>
+                        <label class="input">
+                            <input type="text" placeholder="Фамилия">
+                        </label>
+                        <label class="input">
+                            <input type="email" placeholder="E-mail*" required>
+                        </label>
+                        <label class="input">
+                            <input type="tel" placeholder="Контактный телефон">
+                        </label>
                         <div class="empty"></div>
                         <fieldset class="select theme">
                             <div class="select_current" tabindex="0">
@@ -1552,7 +1560,9 @@
                             </div>
                         </fieldset>
                         <div class="merge">
-                            <input type="text" placeholder="Вопрос*" required>
+                            <label class="input">
+                                <input type="text" placeholder="Вопрос*" required>
+                            </label>
                             <button type="submit">Отправить</button>
                         </div>
                     </form>

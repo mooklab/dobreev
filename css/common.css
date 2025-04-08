@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 * {
   margin: unset;
@@ -459,6 +460,18 @@ label.radio span::after {
   background-repeat: no-repeat;
   background-size: contain;
   border-radius: 50%;
+}
+
+label.input {
+  position: relative;
+}
+label.input.error::after {
+  content: "Ошибка";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  color: #d25050;
 }
 
 input[type=text],
