@@ -5,6 +5,7 @@ productGallery = document.querySelector('div.product_gallery div.swiper.gallery'
 productGallery = document.querySelector('div.product_gallery div.swiper.gallery')
 productGalleryThumbs = document.querySelector('div.product_gallery div.swiper.thumbs')
 productGalleryMobile = document.querySelector('div.about div.swiper.gallery')
+indexMainSlider = document.querySelector('div.banners div.swiper')
 
 const searchHighlighter = (element) => {
     results = element.nextElementSibling.querySelectorAll('a')
@@ -122,6 +123,17 @@ new Swiper(productGalleryMobile, {
         prevEl: productGalleryMobile?.querySelector('div.swiper-navigation > *:first-child'),
         nextEl: productGalleryMobile?.querySelector('div.swiper-navigation > *:last-child'),
     },
+})
+
+new Swiper(indexMainSlider, {
+    navigation: {
+        prevEl: indexMainSlider.querySelector('div.arrow:first-child'),
+        nextEl: indexMainSlider.querySelector('div.arrow:last-child'),
+    },
+    pagination: {
+        el: indexMainSlider.querySelector('div.swiper-pagination'),
+        clickable: true
+    }
 })
 
 const forms = document.querySelectorAll("form");

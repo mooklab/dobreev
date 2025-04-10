@@ -79,6 +79,70 @@ section.main div.banners {
     grid-gap: 8px;
   }
 }
+section.main div.banners div.swiper {
+  grid-column: 1/5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+@media (max-width: 960px) {
+  section.main div.banners div.swiper {
+    grid-column: 1/4;
+  }
+}
+@media (max-width: 640px) {
+  section.main div.banners div.swiper {
+    grid-column: 1/1;
+  }
+}
+section.main div.banners div.swiper div.swiper-control {
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  grid-auto-flow: column;
+  grid-auto-columns: -webkit-max-content;
+  grid-auto-columns: max-content;
+  grid-gap: 14px;
+  position: absolute;
+  right: 20px;
+  bottom: 25px;
+  z-index: 1;
+}
+section.main div.banners div.swiper div.swiper-control div.swiper-pagination {
+  position: static;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+}
+section.main div.banners div.swiper div.swiper-control div.swiper-pagination span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: white;
+  margin: unset;
+  padding: unset;
+  opacity: 1;
+}
+section.main div.banners div.swiper div.swiper-control div.swiper-pagination span.swiper-pagination-bullet-active {
+  background: #4FAA4B;
+}
+section.main div.banners div.swiper div.arrow {
+  cursor: pointer;
+}
+section.main div.banners div.swiper div.arrow svg path {
+  stroke: #536452;
+}
+section.main div.banners div.swiper div.arrow:hover svg path {
+  stroke: #4FAA4B;
+}
+section.main div.banners div.swiper div.arrow:last-child {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
 section.main div.banners div.banner {
   position: relative;
   height: 420px;
@@ -108,17 +172,6 @@ section.main div.banners div.banner:nth-child(1) {
   display: grid;
   -ms-flex-line-pack: center;
       align-content: center;
-  grid-column: 1/5;
-}
-@media (max-width: 960px) {
-  section.main div.banners div.banner:nth-child(1) {
-    grid-column: 1/4;
-  }
-}
-@media (max-width: 640px) {
-  section.main div.banners div.banner:nth-child(1) {
-    grid-column: 1/1;
-  }
 }
 section.main div.banners div.banner:nth-child(1) h1 {
   font-weight: 300;

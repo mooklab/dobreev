@@ -55,6 +55,53 @@ section.main
             grid-template-columns: 1fr
             grid-gap: 8px
 
+        div.swiper
+            grid-column: 1 / 5
+            border-radius: 4px
+            overflow: hidden
+            +screen(m)
+                grid-column: 1 / 4
+            +screen(s)
+                grid-column: 1 / 1
+
+            div.swiper-control
+                display: grid
+                align-content: center
+                grid-auto-flow: column
+                grid-auto-columns: max-content
+                grid-gap: 14px
+                position: absolute
+                right: 20px
+                bottom: 25px
+                z-index: 1
+                div.swiper-pagination
+                    position: static
+                    display: flex
+                    align-items: center
+                    gap: 4px
+                    span
+                        display: block
+                        width: 8px
+                        height: 8px
+                        background: white
+                        margin: unset
+                        padding: unset
+                        opacity: 1
+                        &.swiper-pagination-bullet-active
+                            background: #4FAA4B
+
+            div.arrow
+                cursor: pointer
+                svg
+                    path
+                        stroke: #536452
+                &:hover
+                    svg
+                        path
+                            stroke: #4FAA4B
+                &:last-child
+                    transform: rotate(180deg)
+
         div.banner
             position: relative
             height: 420px
@@ -77,11 +124,7 @@ section.main
             &:nth-child(1)
                 display: grid
                 align-content: center
-                grid-column: 1 / 5
-                +screen(m)
-                    grid-column: 1 / 4
-                +screen(s)
-                    grid-column: 1 / 1
+
                 h1
                     font-weight: 300
                     font-size: 56px

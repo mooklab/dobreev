@@ -101,10 +101,10 @@ section.main
         &:hover
             div.background
                 img
-                    top: -10%
-                    left: -10%
-                    width: 120%
-                    height: 120%
+                    top: -5%
+                    left: -5%
+                    width: 110%
+                    height: 110%
 
     a.article.big
         position: relative
@@ -135,14 +135,27 @@ section.main
 
     a.article.small
         align-content: start
-        img.preview
+        div.preview
+            position: relative
             width: 100%
             height: 437px
             object-fit: cover
             object-position: center center
             margin-bottom: unset
+            overflow: hidden
             +screen(m)
                 height: 400px
+
+            img
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                object-fit: cover
+                object-position: center center
+                transition: all 0.3s
+
         h3
             color: #313b30
             +screen(m)
@@ -152,6 +165,13 @@ section.main
             color: #536452
 
         &:hover
+            div.preview
+                img
+                    position: absolute
+                    width: 110%
+                    height: 110%
+                    top: -5%
+                    left: -5%
             h3
                 color: #4FAA4B
 

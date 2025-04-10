@@ -831,8 +831,6 @@ div.category div.title a {
   font-size: 16px;
   line-height: 125%;
   color: #313b30;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
 div.category div.title a:hover {
   -webkit-text-decoration: underline #4FAA4B;
