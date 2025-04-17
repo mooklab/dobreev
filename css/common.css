@@ -2165,4 +2165,47 @@ section.menu div.category ul {
 }
 section.menu div.category ul a {
   color: #536452;
+}
+
+section.fixed_mobile_menu {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-top: 1px solid #e9ebe6;
+  padding: 6px 15px;
+  z-index: 9;
+}
+@media (max-width: 960px) {
+  section.fixed_mobile_menu {
+    display: block;
+  }
+}
+section.fixed_mobile_menu div.container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: -webkit-max-content;
+  grid-auto-columns: max-content;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-gap: 49px;
+}
+@media (max-width: 480px) {
+  section.fixed_mobile_menu div.container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+section.fixed_mobile_menu a {
+  display: grid;
+  justify-items: center;
+}
+section.fixed_mobile_menu span {
+  font-weight: 400;
+  font-size: 12px;
+  color: #646464;
 }/*# sourceMappingURL=common.css.map */

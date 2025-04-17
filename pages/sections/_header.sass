@@ -431,3 +431,34 @@ section.menu
             margin: 14px 0px 4px 28px
             a
                 color: #536452
+
+section.fixed_mobile_menu
+    display: none
+    position: fixed
+    bottom: 0
+    left: 0
+    width: 100%
+    background: white
+    border-top: 1px solid #e9ebe6
+    padding: 6px 15px
+    z-index: 9
+    +screen(m)
+        display: block
+
+    div.container
+        display: grid
+        grid-auto-flow: column
+        grid-auto-columns: max-content
+        justify-content: center
+        grid-gap: 49px
+        +screen(xs)
+            justify-content: space-between
+
+    a
+        display: grid
+        justify-items: center
+
+    span
+        font-weight: 400
+        font-size: 12px
+        color: #646464
